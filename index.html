@@ -1,29 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@700&display=swap" rel="stylesheet">
 </head>
-<body>
-<div class="container">
-    <div class="start-page">
-        <h1>Welcome to Emotion Match game!</h1>
-        <p>Humas are complex beings, and reading their emotions are not always easy for everyone. But we can always get more familiar with some practice.<p>
-        <p>In this game you get to match the name of several emotions to their corresponding facial expressions.</p>
-        <h2>Your goal:</h2>
-        <p>Match the emotion name with the right image</p>
-        <h2>Instructions</h2>
-        <ol>
-            <li>You will be given four (4) images depicting different emotional reaction and facial expressions and the name of an emotion</li>
-            <li>You'll click on the image the best represent the given emotion</li>
-            <li>For every correct answer, one point will be added to your score board</li>
-            <li>For every incorrect answer, one point will be added to your incorrect answer tally</li>
-            <li>After 5 rounds, you'll get your final score</li>
-        </ol>
 
+<body>
+    <div class="container">
+
+        <!-- Home page -->
+        <div class="start-page">
+            <header>
+                <h1>Welcome to Emotion Match game!</h1>
+            </header>
+            <p>Humans are complex beings, and reading their emotions are not always easy for everyone. But we can always
+                get more familiar with some practice.<p>
+                    <p>In this game you get to match the name of several emotions to their corresponding facial
+                        expressions.</p>
+                    <h2>Your goal:</h2>
+                    <p>Match the emotion name with the right image</p>
+                    <h2>Instructions</h2>
+                    <ol>
+                        <li>You will be given four (4) images depicting different emotional reaction and facial
+                            expressions and the name of an emotion</li>
+                        <li>You'll click on the image the best represent the given emotion</li>
+                        <li>For every correct answer, one point will be added to your score board</li>
+                        <li>For every incorrect answer, one point will be added to your incorrect answer tally</li>
+                        <li>After 5 rounds, you'll get your final score</li>
+                    </ol>
+                    <button id="start-game-btn">Start!</button>
+        </div>
+
+        <!-- Game start -->
+        <div id="start-game-div">
+            <h2 id="game-title">Choose the image that best describes the following emotion</h2>
+            <h1 id="emotion">Placeholder</h1>
+            <div id="images">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+        </div>
+        <div id="final-score-div">
+            <h2 id="score-title">This is your final score:</h2>
+            <h1 id="final-score">Placeholder</h1>
+            <h3>Would you like to try again?</h3>
+            <button id="restart">Restart</button>
+        </div>
     </div>
-</div>
+    <script src="assets/js/script.js"></script>
 </body>
+
 </html>
