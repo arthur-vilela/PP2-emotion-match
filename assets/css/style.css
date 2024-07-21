@@ -30,18 +30,18 @@ header h1 {
     font-weight: 700;
 }
 
-.start-page p,
-.start-page ol,
-.start-page h2 {
+#start-page p,
+#start-page ol,
+#start-page h2 {
     text-align: left;
     margin-bottom: 20px;
 }
 
-.start-page ol {
+#start-page ol {
     padding-left: 20px;
 }
 
-.start-page li {
+#start-page li {
     padding-top: 5px;
 }
 
@@ -64,6 +64,11 @@ button:hover {
 
 /* Game start page */
 #start-game-div {
+    display: none;
+}
+
+/* Final score page */
+#final-score-div {
     display: none;
 }
 
