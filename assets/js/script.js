@@ -28,6 +28,11 @@ let emotions = {
     Disgust: 'path to disgust.jpg'
 };
 
+let currentRound = 0;
+const totalRounds = 5;
+let score = 0;
+let wrongAnswers = 0;
+
 function getRandomEmotions(emotions, count) {
     const keys = Object.keys(emotions);
     const randomKeys = [];
@@ -47,6 +52,10 @@ function getRandomEmotions(emotions, count) {
 function startNewGame() {
     homePageDiv.style.display = "none"; //hide the home screen and display the initial game screen
     gamePageDiv.style.display = "block";
+
+    currentRound = 0;
+    score = 0;
+    wrongAnswers = 0;
 
     const selectedEmotions = getRandomEmotions(emotions, 4);
     const correctEmotionIndex = Math.floor(Math.random() * 4);

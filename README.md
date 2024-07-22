@@ -15,3 +15,6 @@ function startNewGame() {
 
 # Credits
 https://stackoverflow.com/questions/2532218/pick-random-property-from-a-javascript-object Logic to obtain random emotions from the emotion object was adapted from this answer
+
+# Bugs
+When viewd on small mobile devices, the top of the home page div touch the top and bottom of the screen, not showing the padding, for some reason yet unkown.
