@@ -4,33 +4,35 @@ const scorePageDiv = document.getElementById("final-score-div");
 const startGameBtn = document.getElementById("start-game-btn");
 const checkScoreBtn = document.getElementById("check-score-btn");
 const restartBtn = document.getElementById("restart");
+const instructionsBtn = document.getElementById("instructions");
 
 const emotionDisplay = document.getElementById("emotion");
 const images = document.querySelectorAll("#images img");
 
 let emotions = {
-    grief: 'path to grief.jpg',
-    amazement: 'path to amazement.jpg',
-    terror: 'path to terror.jpg',
-    admiration: 'path to admiration.jpg',
-    ecstasy: 'path to ecstasy.jpg',
-    vigilance: 'path to vigilance.jpg',
-    rage: 'path to rage.jpg',
-    loathing: 'path to loathing.jpg',
-    sadness: 'path to sadness.jpg',
-    surprise: 'path to surprise.jpg',
-    fear: 'path to fear.jpg',
-    trust: 'path to trust.jpg',
-    joy: 'path to joy.jpg',
-    anticipation: 'path  o/anticipation.jpg',
-    anger: 'path to anger.jpg',
-    disgust: 'path to disgust.jpg'
+    Grief: 'path to grief.jpg',
+    Amazement: 'path to amazement.jpg',
+    Terror: 'path to terror.jpg',
+    Admiration: 'path to admiration.jpg',
+    Ecstasy: 'path to ecstasy.jpg',
+    Vigilance: 'path to vigilance.jpg',
+    Rage: 'path to rage.jpg',
+    Loathing: 'path to loathing.jpg',
+    Sadness: 'path to sadness.jpg',
+    Surprise: 'path to surprise.jpg',
+    Fear: 'path to fear.jpg',
+    Trust: 'path to trust.jpg',
+    Joy: 'path to joy.jpg',
+    Anticipation: 'path  o/anticipation.jpg',
+    Anger: 'path to anger.jpg',
+    Disgust: 'path to disgust.jpg'
 };
 
 function getRandomEmotions(emotions, count) {
     const keys = Object.keys(emotions);
     const randomKeys = [];
 
+    // Loop to select random emotion keys
     while (randomKeys.length < count) {
         const randomIndex = Math.floor(Math.random() * keys.length);
         const randomKey = keys[randomIndex];
@@ -80,14 +82,19 @@ function checkScore() {
 }
 
 /**
- * This function will hide the final score screen and
- * display the home screen
+ * This function hides the score page and start a new game
  */
 function restartGame() {
     scorePageDiv.style.display = "none";
-    homePageDiv.style.display = "block";
+    startNewGame();
 }
 
+function backToInstructions() {
+    scorePageDiv.style.display = "none";
+    homePageDiv.style.display = "block";
+
+}
 startGameBtn.addEventListener("click", startNewGame);
 checkScoreBtn.addEventListener("click", checkScore);
 restartBtn.addEventListener("click", restartGame);
+instructionsBtn.addEventListener("click", backToInstructions);
