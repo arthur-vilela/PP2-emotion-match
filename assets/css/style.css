@@ -55,11 +55,12 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease;
     display: inline-block;
-    box-shadow: 5px 5px 5px #333;
+    box-shadow: 0px 4px 14px 0px rgb(50, 94, 94);
 }
 
 button:hover {
     background-color: rgb(16, 92, 92);
+    transform: translateY(-1px);
 }
 
 /* Game start page */
@@ -67,6 +68,12 @@ button:hover {
     display: none;
 }
 
+img {
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    margin: 15px;
+}
 /* Final score page */
 #final-score-div {
     display: none;
