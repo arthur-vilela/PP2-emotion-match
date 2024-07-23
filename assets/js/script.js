@@ -33,6 +33,9 @@ const totalRounds = 5;
 let score = 0;
 let wrongAnswers = 0;
 
+/**
+ * Function to get random emotions from the emotions object
+ */
 function getRandomEmotions(emotions, count) {
     const keys = Object.keys(emotions);
     const randomKeys = [];
@@ -49,25 +52,46 @@ function getRandomEmotions(emotions, count) {
     return randomKeys;
 }
 
+/**
+ * Function to start a new game
+ */
 function startNewGame() {
     homePageDiv.style.display = "none"; //hide the home screen and display the initial game screen
     gamePageDiv.style.display = "block";
 
-    currentRound = 0;
+    currentRound = 0; //Initial game stats
     score = 0;
     wrongAnswers = 0;
 
-    const selectedEmotions = getRandomEmotions(emotions, 4);
-    const correctEmotionIndex = Math.floor(Math.random() * 4);
+    nextRound(); // Start the first round
+}
+
+/**
+ * Function to setup next round
+ */
+function nextRound() {
+if (currentRound >= totalRounds) { // Check if it has been already five rounds
+    showFinalScore();
+    return;
+}
+
+    const selectedEmotions = getRandomEmotions(emotions, 4); // Select four random emotions
+    const correctEmotionIndex = Math.floor(Math.random() * 4); // Select a random index for the correct answer
     const correctEmotion = selectedEmotions[correctEmotionIndex];
 
-    emotionDisplay.textContent = correctEmotion;
+    console.log("Selected Emotions:", selectedEmotions); // Log selected and correct emotion for debuging
+    console.log("Correct Emotion Index:", correctEmotionIndex);
+    console.log("Correct Emotion:", correctEmotion);
+
+    emotionDisplay.textContent = correctEmotion; // Display the correct emotion name in HTML
 
     images.forEach((img, index) => {
         img.src = emotions[selectedEmotions[index]]; //assigns the src and alt attributes of each image element based on the randomly selected emotions.
         img.alt = selectedEmotions[index];
         img.onclick = () => checkAnswer(selectedEmotions[index], correctEmotion);
     });
+
+    currentRound++; // Increase round counter
 }
 
 function checkAnswer(selectedEmotion, correctEmotion) {
@@ -79,6 +103,8 @@ function checkAnswer(selectedEmotion, correctEmotion) {
         // Update wrong answer counter, and don't forget to change the alert for a more positive one
     }
     // add function to start a new round of images!
+
+    nextRound(); // Move to next round
 }
 
 /**
@@ -94,8 +120,8 @@ function checkScore() {
  * This function hides the score page and start a new game
  */
 function restartGame() {
-    scorePageDiv.style.display = "none";
-    startNewGame();
+    scorePageDiv.style.display = "none";// Hide the score page and start a new game
+    startNewGame(); // Call function startNewGame to restart the game without returning to the initial page
 }
 
 function backToInstructions() {
