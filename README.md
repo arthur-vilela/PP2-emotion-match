@@ -20,3 +20,5 @@ https://www.w3schools.com/jsref/jsref_foreach.asp Explanation and examples of th
 
 # Bugs
 When viewd on small mobile devices, the top of the home page div touch the top and bottom of the screen, not showing the padding, for some reason yet unkown.
+
+Final score didn't update, keeping the placeholder text at the end of game. When reviewing the JavaScript code, 

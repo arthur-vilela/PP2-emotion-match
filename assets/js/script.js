@@ -70,10 +70,10 @@ function startNewGame() {
  * Function to setup next round
  */
 function nextRound() {
-if (currentRound >= totalRounds) { // Check if it has been already five rounds
-    showFinalScore();
-    return;
-}
+    if (currentRound >= totalRounds) { // Check if it has already been five rounds
+        showFinalScore();
+        return;
+    }
 
     const selectedEmotions = getRandomEmotions(emotions, 4); // Select four random emotions
     const correctEmotionIndex = Math.floor(Math.random() * 4); // Select a random index for the correct answer
@@ -97,12 +97,11 @@ if (currentRound >= totalRounds) { // Check if it has been already five rounds
 function checkAnswer(selectedEmotion, correctEmotion) {
     if (selectedEmotion === correctEmotion) {
         alert('Correct!');
-        // Still have to update score counter!
+        score++ // Increase correct answer score
     } else {
         alert('Incorrect!');
-        // Update wrong answer counter, and don't forget to change the alert for a more positive one
+        wrongAnswers++; // Increase wrong answer counter, and don't forget to change the alert for a more positive one
     }
-    // add function to start a new round of images!
 
     nextRound(); // Move to next round
 }
@@ -116,14 +115,14 @@ function showFinalScore() {
     scorePageDiv.style.display = "block";
 
     // Display the final score on HTML
-    document.getElementById("final-scre").value = `Final score: ${score} | Incorrect answers: ${wrongAnswers}`;
+    document.getElementById("final-score").textContent = `Final score: ${score} | Incorrect answers: ${wrongAnswers}`;
 }
 
 /**
  * This function hides the score page and start a new game
  */
 function restartGame() {
-    scorePageDiv.style.display = "none";// Hide the score page and start a new game
+    scorePageDiv.style.display = "none"; // Hide the score page and start a new game
     startNewGame(); // Call function startNewGame to restart the game without returning to the initial page
 }
 
