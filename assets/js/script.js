@@ -111,9 +111,12 @@ function checkAnswer(selectedEmotion, correctEmotion) {
  * This function will hide the game screen and
  * display the final score screen
  */
-function checkScore() {
+function showFinalScore() {
     gamePageDiv.style.display = "none";
     scorePageDiv.style.display = "block";
+
+    // Display the final score on HTML
+    document.getElementById("final-scre").value = `Final score: ${score} | Incorrect answers: ${wrongAnswers}`;
 }
 
 /**
@@ -129,7 +132,9 @@ function backToInstructions() {
     homePageDiv.style.display = "block";
 
 }
+
+
 startGameBtn.addEventListener("click", startNewGame);
-checkScoreBtn.addEventListener("click", checkScore);
+checkScoreBtn.addEventListener("click", showFinalScore);
 restartBtn.addEventListener("click", restartGame);
 instructionsBtn.addEventListener("click", backToInstructions);
