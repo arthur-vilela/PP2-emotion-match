@@ -29,7 +29,7 @@ let emotions = {
 };
 
 let currentRound = 0;
-const totalRounds = 5;
+const totalRounds = 6;
 let score = 0;
 let wrongAnswers = 0;
 
