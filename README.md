@@ -19,6 +19,24 @@ https://stackoverflow.com/questions/2532218/pick-random-property-from-a-javascri
 https://www.w3schools.com/jsref/jsref_foreach.asp Explanation and examples of the "forEach" method were taken from this tutorial from W3Schools
 
 # Bugs
-When viewd on small mobile devices, the top of the home page div touch the top and bottom of the screen, not showing the padding, for some reason yet unkown.
+When inspecting the deployed website and visualizing it on mobile resolutions, the top of the home page div touch the top and bottom of the screen, not showing the padding nor scrolling all the way for some reason yet unkown. When opening the page on a mobile device, the website looks as it should.
 
-Final score didn't update, keeping the placeholder text at the end of game. When reviewing the JavaScript code, 
+![screenshot of game home page without showing top padding](docs/bug-top-padding.png)
+
+Final score didn't update, keeping the placeholder text at the end of game.
+
+![screenshot of final score screen with placeholder text instead of score](docs/bug-final-score.png)
+
+Chrome Devtools indicated the problem in the JavaScript:
+
+![screenshot of error shown in Devtools console](docs/bug-final-score-devtools.png)
+
+```
+document.getElementById("final-scre").value = `Fi...
+```
+
+instead of 
+
+```
+document.getElementById("final-score").textContent = `Fi
+```
