@@ -57,7 +57,7 @@ During each round, the game presents the user with four images, each depicting d
 
 ---
 
-# Technologies used
+## Technologies used
 
 |Technology | Use|
 |--|--|
@@ -70,20 +70,7 @@ During each round, the game presents the user with four images, each depicting d
 |[WEBP Converter](https://cloudconvert.com/webp-converter)| Convert jpg/png images to webp format
 |[Favicon.io](https://favicon.io/favicon-converter/) | Create favicon files
 
-# Testing
-    function startNewGame() {
-        homePageDiv.style.display = "none";
-        gamePageDiv.style.display = "block";
-
-        const selectedEmotions = getRandomEmotions(emotions, 4);
-        const correctEmotionIndex = Math.floor(Math.random() * 4);
-        const correctEmotion = selectedEmotions[correctEmotionIndex];
-
-        console.log("Selected Emotions:", selectedEmotions);
-        console.log("Correct Emotion Index:", correctEmotionIndex);
-        console.log("Correct Emotion:", correctEmotion);
-
-By running the game multiple times and observing the console output on Chrome Devtools, I verified that the correct emotion appears in a random position each time. The correctEmotionIndex will vary between 0 and 3, ensuring the correct emotion's image is displayed in a different position for each game round.
+## Testing
 
 | Test | Result |
 |--|--|
@@ -100,6 +87,25 @@ By running the game multiple times and observing the console output on Chrome De
 |The restart button on the final page starts a new play|Pass|
 |The round counter, score and wrong answer tally are zeroed when the game is restarted|Pass|
 |The "Instructions" button in the final page returns to the home page|Pass|
+
+    function startNewGame() {
+        homePageDiv.style.display = "none";
+        gamePageDiv.style.display = "block";
+
+        const selectedEmotions = getRandomEmotions(emotions, 4);
+        const correctEmotionIndex = Math.floor(Math.random() * 4);
+        const correctEmotion = selectedEmotions[correctEmotionIndex];
+
+        console.log("Selected Emotions:", selectedEmotions);
+        console.log("Correct Emotion Index:", correctEmotionIndex);
+        console.log("Correct Emotion:", correctEmotion);
+
+By running the game multiple times and observing the console output on Chrome Devtools, I verified that the correct emotion appears in a random position each time. The correctEmotionIndex will vary between 0 and 3, ensuring the correct emotion's image is displayed in a different position for each game round.
+
+### User testing
+
+- I asked five people of between 28 and 64 years old to play the game multiple times, during coding and after. They found the following bugs that are described in the following.
+- All five people declared that they did not have any difficulties in understading and following the instructions of the game.
 
 # Bugs
 - When inspecting the deployed website and visualizing it on mobile resolutions, the top of the home page div touch the top and bottom of the screen, not showing the padding nor scrolling all the way. A margin was added to the .container `<div>` fixing the spacing issue.
@@ -129,9 +135,9 @@ By running the game multiple times and observing the console output on Chrome De
     - modified the `getRandomEmotions` function to exclude these emotions from the selection pool;
     - updated the `checkAnswer` function to add the correct emotion the the array when guessed correcly.
 
-- After creating an array to contain the already chosen correct answers, when playing the game, one image wouldn't show and is described as undefined.
+- One image wouldn't show and was described as undefined when playing the game. This happened after creating an array to contain the already chosen correct answers.
 
-    To fix it, I corrected the logic in getRandomEmotions function to properly filter out already guessed emotions and select random emotions from the available ones.
+    To fix it, I corrected the logic in `getRandomEmotions` function to properly filter out already guessed emotions and select random emotions from the available ones.
 
 # Validator testing
 
