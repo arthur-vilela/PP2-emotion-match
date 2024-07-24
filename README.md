@@ -55,6 +55,11 @@ instead of
 ```
 document.getElementById("final-score").textContent = `Fi
 ```
+- The same emotion could appear in subsequent rounds, since the emotions are selected randomly. To fix this, I:
+    - added an array to store the correctly guessed emotions;
+    - modified the `getRandomEmotions` function to exclude these emotions from the selection pool;
+    - updated the `checkAnswer` function to add the correct emotion the the array when guessed correcly.
+
 
 # Validator testing
 
