@@ -85,6 +85,22 @@ During each round, the game presents the user with four images, each depicting d
 
 By running the game multiple times and observing the console output on Chrome Devtools, I verified that the correct emotion appears in a random position each time. The correctEmotionIndex will vary between 0 and 3, ensuring the correct emotion's image is displayed in a different position for each game round.
 
+| Test | Result |
+|--|--|
+|The buttons react when hovered | Pass |
+|The home page is hidden when the start button is clicked |Pass|
+|The game page displays when the start button is clicked |Pass|
+|A new round is started when the start button is clicked |Pass|
+|The images displayed are randomly chosen every round |Pass|
+|The correctly guessed emotion is not shown again in the next round within the same play|Pass|
+|The image displays a green border when correctly clicked|Pass|
+|The image displays a red border when incorrectly clicked|Pass|
+|The score is calculated and displayed on the final page|Pass|
+|The wrong answer tally is calculated and displayed on the final page|Pass|
+|The restart button on the final page starts a new play|Pass|
+|The round counter, score and wrong answer tally are zeroed when the game is restarted|Pass|
+|The "Instructions" button in the final page returns to the home page|Pass|
+
 # Bugs
 - When inspecting the deployed website and visualizing it on mobile resolutions, the top of the home page div touch the top and bottom of the screen, not showing the padding nor scrolling all the way. A margin was added to the .container `<div>` fixing the spacing issue.
 
