@@ -40,6 +40,7 @@ let correctGuesses = []; // Array to store the correctly guessed emotions
  */
 function getRandomEmotions(emotions, count) {
     const keys = Object.keys(emotions);
+    const availableKeys = keys.filter(key => !correctGuesses.include(key)); // Filter out emotions that are also in the 'correct guesses' array
     const randomKeys = [];
 
     // Loop to select random emotion keys
