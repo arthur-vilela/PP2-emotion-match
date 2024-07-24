@@ -32,7 +32,8 @@ Below the instructions, there is the "Start!" button, taking the user directly t
 ### Final score page
 
 ## Features left to implement
-Add variations of images depending of user cultural background
+
+- Add variations of images depending of user cultural background
 
 - Add a counter to the game to increase the tension involved and make the game more involving.
 
@@ -42,17 +43,19 @@ The game is designed to be intuitive and user-friendly, ensuring that players of
 
 During each round, the game presents the user with four images, each depicting different emotional expressions, and displays an emotion name at the top of the page. The user must click on the image that best represents the given emotion. The core functionality of the game revolves around several key functions:
 
-1. startNewGame(): This function initializes a new game session, resetting the current round, score, incorrect answer count, and the list of correctly guessed emotions. It hides the home screen and displays the game screen.
+1. `startNewGame()`: This function initializes a new game session, resetting the current round, score, incorrect answer count, and the list of correctly guessed emotions. It hides the home screen and displays the game screen.
 
-2. nextRound(): This function sets up the next round of the game. It randomly selects four emotions, ensuring that previously correctly guessed emotions are excluded, and assigns these emotions to the four images. One of these emotions is chosen as the correct answer, which is displayed at the top of the screen.
+2. `nextRound()`: This function sets up the next round of the game. It randomly selects four emotions, ensuring that previously correctly guessed emotions are excluded, and assigns these emotions to the four images. One of these emotions is chosen as the correct answer, which is displayed at the top of the screen.
 
-3. checkAnswer(selectedEmotion, correctEmotion, img): This function is triggered when the user clicks on an image. It checks if the selected emotion matches the correct emotion. If correct, the image's border turns green, and if incorrect, it turns red. The game then waits for a short duration before proceeding to the next round or displaying the final score if all rounds are completed.
+3. `checkAnswer()`: This function is triggered when the user clicks on an image. It checks if the selected emotion matches the correct emotion. If correct, the image's border turns green, and if incorrect, it turns red. The game then waits for a short duration before proceeding to the next round or displaying the final score if all rounds are completed.
 
-4. showFinalScore(): Once all rounds are completed, this function displays the user's final score, including the number of correct and incorrect answers.
+4. `showFinalScore()`: Once all rounds are completed, this function displays the user's final score, including the number of correct and incorrect answers.
 
-5. restartGame(): This function allows the user to restart the game without returning to the initial instruction screen, enabling continuous play and practice.
+5. `restartGame()`: This function allows the user to restart the game without returning to the initial instruction screen, enabling continuous play and practice.
 
-6. backToInstructions(): This function takes the user back to the home screen with the instructions, in case they need a refresher on how to play the game.
+6. `backToInstructions()`: This function takes the user back to the home screen with the instructions, in case they need a refresher on how to play the game.
+
+---
 
 # Technologies used
 - Adobe Photoshop to create image for favicon
@@ -74,32 +77,36 @@ During each round, the game presents the user with four images, each depicting d
 By running the game multiple times and observing the console output on Chrome Devtools, I verified that the correct emotion appears in a random position each time. The correctEmotionIndex will vary between 0 and 3, ensuring the correct emotion's image is displayed in a different position for each game round.
 
 # Bugs
-When inspecting the deployed website and visualizing it on mobile resolutions, the top of the home page div touch the top and bottom of the screen, not showing the padding nor scrolling all the way for some reason yet unkown. When opening the page on a mobile device, the website looks as it should.
+- When inspecting the deployed website and visualizing it on mobile resolutions, the top of the home page div touch the top and bottom of the screen, not showing the padding nor scrolling all the way. A margin was added to the .container `<div>` fixing the spacing issue.
 
-![screenshot of game home page without showing top padding](docs/bug-top-padding.png)
+    ![screenshot of game home page without showing top padding](docs/bug-top-padding.png)
 
-Final score didn't update, keeping the placeholder text at the end of game.
+- Final score didn't update, keeping the placeholder text at the end of game.
 
-![screenshot of final score screen with placeholder text instead of score](docs/bug-final-score.png)
+    ![screenshot of final score screen with placeholder text instead of score](docs/bug-final-score.png)
 
-Chrome Devtools indicated the problem in the JavaScript:
+    Chrome Devtools indicated the problem in the JavaScript:
 
-![screenshot of error shown in Devtools console](docs/bug-final-score-devtools.png)
+    ![screenshot of error shown in Devtools console](docs/bug-final-score-devtools.png)
 
-```
-document.getElementById("final-scre").value = `Fi...
-```
+    ```
+    document.getElementById("final-scre").value = `Fi...
+    ```
 
-instead of 
+    instead of 
 
-```
-document.getElementById("final-score").textContent = `Fi
-```
+    ```
+    document.getElementById("final-score").textContent = `Fi
+    ```
+
 - The same emotion could appear in subsequent rounds, since the emotions are selected randomly. To fix this, I:
     - added an array to store the correctly guessed emotions;
     - modified the `getRandomEmotions` function to exclude these emotions from the selection pool;
     - updated the `checkAnswer` function to add the correct emotion the the array when guessed correcly.
 
+- After creating an array to contain the already chosen correct answers, when playing the game, one image wouldn't show and is described as undefined.
+
+    To fix it, I corrected the logic in getRandomEmotions function to properly filter out already guessed emotions and select random emotions from the available ones.
 
 # Validator testing
 
