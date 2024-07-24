@@ -31,7 +31,7 @@ let emotions = {
 // Global initial variables
 let currentRound = 0; // Track the current round
 const totalRounds = 6; // Total number of rounds
-let score = 0; // Track corect answers
+let score = 0; // Track correct answers
 let wrongAnswers = 0; // Track incorrect answers
 let correctGuesses = []; // Array to store the correctly guessed emotions
 
@@ -40,7 +40,7 @@ let correctGuesses = []; // Array to store the correctly guessed emotions
  */
 function getRandomEmotions(emotions, count) {
     const keys = Object.keys(emotions);
-    const availableKeys = keys.filter(key => !correctGuesses.includes(key)); // Filter out emotions that are also in the 'correct guesses' array
+    const availableKeys = keys.filter(key => !correctGuesses.includes(key)); // Filter out emotions that are in the 'correct guesses' array
     const randomKeys = [];
 
     // Loop to select random emotion keys
@@ -59,10 +59,10 @@ function getRandomEmotions(emotions, count) {
  * Function to start a new game
  */
 function startNewGame() {
-    homePageDiv.style.display = "none"; //hide the home screen and display the initial game screen
+    homePageDiv.style.display = "none"; // Hide the home screen and display the initial game screen
     gamePageDiv.style.display = "block";
 
-    currentRound = 0; //Initial game stats
+    currentRound = 0; // Initial game stats
     score = 0;
     wrongAnswers = 0;
     correctGuesses = []; // Reset correct guesses
@@ -90,9 +90,10 @@ function nextRound() {
     emotionDisplay.textContent = correctEmotion; // Display the correct emotion name in HTML
 
     images.forEach((img, index) => {
-        img.src = emotions[selectedEmotions[index]]; //assigns the src and alt attributes of each image element based on the randomly selected emotions.
+        img.src = emotions[selectedEmotions[index]]; // Assign the src and alt attributes of each image element based on the randomly selected emotions.
         img.alt = selectedEmotions[index];
-        img.onclick = () => checkAnswer(selectedEmotions[index], correctEmotion);
+        img.onclick = () => checkAnswer(img, selectedEmotions[index], correctEmotion);
+        img.classList.remove("correct", "incorrect"); // Remove any colorful borders
     });
 
     currentRound++; // Increase round counter
@@ -101,17 +102,20 @@ function nextRound() {
 /**
  * Function to check the selected answer
  */
-function checkAnswer(selectedEmotion, correctEmotion) {
+function checkAnswer(img, selectedEmotion, correctEmotion) {
     if (selectedEmotion === correctEmotion) {
-        alert('Correct!');
-        score++ // Increase correct answer score
+        img.classList.add("correct"); // Add green border for correct answer
+        score++; // Increase correct answer score
         correctGuesses.push(correctEmotion); // Add the correct emotion to the array
     } else {
-        alert('Incorrect!');
+        img.classList.add("incorrect");
         wrongAnswers++; // Increase wrong answer counter, and don't forget to change the alert for a more positive one
     }
 
-    nextRound(); // Move to next round
+    // Wait for 1 second before moving to the next round
+    setTimeout(() => {
+        nextRound(); // Move to next round
+    }, 1000);
 }
 
 /**
