@@ -1,22 +1,41 @@
-# Table of contents
-1. UX Design
-2. Features
-3. Technologies used
-4. Testing
-5. Bugs
-6. Validator testing
-7. Deployment
-8. Credits
-9. Acknowledgements
+# Emotion Match Game
+
+The Emotion Match Game is a online quiz game designed to improve people's emotion literacy by increasing their emotional vocabulary and thus to better express their feelings. The concept of the emotion wheel is widely present in the psychology field as well as schools. The game will be useful for people who  can't easily read emotional cues in social situations. That includes children, emotionally blocked adults and people with mental diagnostics that affect their social abilities.
+
+The user must match the randomly given emotion with the image that best depicts it, increasing their final score.
+
+## Table of contents
+1. <a href="#ux-design">UX Design</a> 
+2. <a href="#features">Features</a>
+3. <a href="#technologies-used">Technologies used</a>
+4. <a href="#testing">Testing</a>
+5. <a href="#bugs">Bugs</a>
+6. <a href="#validator-testing">Validator testing</a>
+7. <a href="#deployment">Deployment</a>
+8. <a href="#credits">Credits</a>
+9. <a href="#acknowledgements">Acknowledgements</a>
 
 # UX Design
 
 # Features
 
+### Home page
+
+The landing page includes a title, a welcome message, the goal of the game and a list of instructions. From the get go, the user know what the game is about, why and how to play it.
+Below the instructions, there is the "Start!" button, taking the user directly to the first round of the game.
+
+![Screenshot of the game's homepage](docs/home-page-screeshot.png)
+
+### Game page
+
+
+
 ## Features left to implement
 Add variations of images depending of user cultural background
 
 # Technologies used
+- Adobe Photoshop to create image for favicon
+- ![link to favicon converter website](https://favicon.io/favicon-converter/) to create favicon files
 
 # Testing
     function startNewGame() {
