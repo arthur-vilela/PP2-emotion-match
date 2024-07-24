@@ -10,22 +10,22 @@ const emotionDisplay = document.getElementById("emotion");
 const images = document.querySelectorAll("#images img");
 
 let emotions = {
-    Grief: 'path to grief.jpg',
-    Amazement: 'path to amazement.jpg',
-    Terror: 'path to terror.jpg',
-    Admiration: 'path to admiration.jpg',
-    Ecstasy: 'path to ecstasy.jpg',
-    Vigilance: 'path to vigilance.jpg',
-    Rage: 'path to rage.jpg',
-    Loathing: 'path to loathing.jpg',
-    Sadness: 'path to sadness.jpg',
-    Surprise: 'path to surprise.jpg',
-    Fear: 'path to fear.jpg',
-    Trust: 'path to trust.jpg',
-    Joy: 'path to joy.jpg',
-    Anticipation: 'path  o/anticipation.jpg',
-    Anger: 'path to anger.jpg',
-    Disgust: 'path to disgust.jpg'
+    Grief: 'assets/images/grief.webp',
+    Amazement: 'assets/images/amazement.webp',
+    Terror: 'assets/images/terror.webp',
+    Admiration: 'assets/images/admiration.webp',
+    Ecstasy: 'assets/images/ecstasy.webp',
+    Vigilance: 'assets/images/vigilance.webp',
+    Rage: 'assets/images/rage.webp',
+    Loathing: 'assets/images/loathing.webp',
+    Sadness: 'assets/images/sadness.webp',
+    Surprise: 'assets/images/surprise.webp',
+    Fear: 'assets/images/fear.webp',
+    Trust: 'assets/images/trust.webp',
+    Joy: 'assets/images/joy.webp',
+    Anticipation: 'assets/images/anticipation.webp',
+    Anger: 'assets/images/anger.webp',
+    Disgust: 'assets/images/disgust.webp'
 };
 
 let currentRound = 0;
