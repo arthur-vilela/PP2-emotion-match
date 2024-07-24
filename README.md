@@ -58,8 +58,17 @@ During each round, the game presents the user with four images, each depicting d
 ---
 
 # Technologies used
-- Adobe Photoshop to create image for favicon
-- [Favicon converter website](https://favicon.io/favicon-converter/) to create favicon files
+
+|Technology | Use|
+|--|--|
+|HTML| Structure the webpage
+|CSS| Style and add layout to the project
+|[Font Awesome](https://fontawesome.com/)| Used for the GitHub icon
+|[GoogleFonts](https://fonts.google.com/)| Research, pair and add fonts to the project
+|Adobe Photoshop| Create the favicon logo
+|[Optimizilla](https://imagecompressor.com/)| Compress images
+|[WEBP Converter](https://cloudconvert.com/webp-converter)| Convert jpg/png images to webp format
+|[Favicon.io](https://favicon.io/favicon-converter/) | Create favicon files
 
 # Testing
     function startNewGame() {
