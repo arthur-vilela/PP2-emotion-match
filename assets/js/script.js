@@ -28,10 +28,12 @@ let emotions = {
     Disgust: 'assets/images/disgust.webp'
 };
 
-let currentRound = 0;
-const totalRounds = 6;
-let score = 0;
-let wrongAnswers = 0;
+// Global initial variables
+let currentRound = 0; // Track the current round
+const totalRounds = 6; // Total number of rounds
+let score = 0; // Track corect answers
+let wrongAnswers = 0; // Track incorrect answers
+let correctGuesses = []; // Array to store the correctly guessed emotions
 
 /**
  * Function to get random emotions from the emotions object
@@ -62,6 +64,7 @@ function startNewGame() {
     currentRound = 0; //Initial game stats
     score = 0;
     wrongAnswers = 0;
+    correctGuesses = []; // Reset correct guesses
 
     nextRound(); // Start the first round
 }
@@ -70,7 +73,7 @@ function startNewGame() {
  * Function to setup next round
  */
 function nextRound() {
-    if (currentRound >= totalRounds) { // Check if it has already been five rounds
+    if (currentRound >= totalRounds) { // Check if it has already been six rounds
         showFinalScore();
         return;
     }
@@ -94,6 +97,9 @@ function nextRound() {
     currentRound++; // Increase round counter
 }
 
+/**
+ * Function to check the selected answer
+ */
 function checkAnswer(selectedEmotion, correctEmotion) {
     if (selectedEmotion === correctEmotion) {
         alert('Correct!');
@@ -126,13 +132,16 @@ function restartGame() {
     startNewGame(); // Call function startNewGame to restart the game without returning to the initial page
 }
 
+/**
+ * This function returns to the home page with instructions
+ */
 function backToInstructions() {
     scorePageDiv.style.display = "none";
     homePageDiv.style.display = "block";
 
 }
 
-
+// Event listeners for buttons
 startGameBtn.addEventListener("click", startNewGame);
 checkScoreBtn.addEventListener("click", showFinalScore);
 restartBtn.addEventListener("click", restartGame);
