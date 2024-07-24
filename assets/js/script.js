@@ -105,6 +105,7 @@ function checkAnswer(selectedEmotion, correctEmotion) {
     if (selectedEmotion === correctEmotion) {
         alert('Correct!');
         score++ // Increase correct answer score
+        correctGuesses.push(correctEmotion); // Add the correct emotion to the array
     } else {
         alert('Incorrect!');
         wrongAnswers++; // Increase wrong answer counter, and don't forget to change the alert for a more positive one
