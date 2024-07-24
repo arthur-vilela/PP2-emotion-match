@@ -1,4 +1,24 @@
-# Tests
+# Table of contents
+1. UX Design
+2. Features
+3. Technologies used
+4. Testing
+5. Bugs
+6. Validator testing
+7. Deployment
+8. Credits
+9. Acknowledgements
+
+# UX Design
+
+# Features
+
+## Features left to implement
+Add variations of images depending of user cultural background
+
+# Technologies used
+
+# Testing
     function startNewGame() {
         homePageDiv.style.display = "none";
         gamePageDiv.style.display = "block";
@@ -36,6 +56,10 @@ instead of
 document.getElementById("final-score").textContent = `Fi
 ```
 
+# Validator testing
+
+# Deployment
+
 # Credits
 https://stackoverflow.com/questions/2532218/pick-random-property-from-a-javascript-object Logic to obtain random emotions from the emotion object was adapted from this answer
 
@@ -48,5 +72,4 @@ https://www.6seconds.org/2022/03/13/plutchik-wheel-emotions/
 Change message 
 of final score from "final score" to "Correct answers"
 
-# Features left to implement
-Add variations of images depending of user cultural background
+# Acknowledgements
