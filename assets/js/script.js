@@ -45,7 +45,7 @@ function getRandomEmotions(emotions, count) {
 
     // Loop to select random emotion keys
     while (randomKeys.length < count) {
-        const randomIndex = Math.floor(Math.random() * keys.length);
+        const randomIndex = Math.floor(Math.random() * availableKeys.length);
         const randomKey = availableKeys[randomIndex];
         if (!randomKeys.includes(randomKey)) {
             randomKeys.push(randomKey);
