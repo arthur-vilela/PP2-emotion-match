@@ -7,17 +7,18 @@ The user must match the randomly given emotion with the image that best depicts 
 ## Table of contents
 1. <a href="#ux-design">UX Design</a> 
 2. <a href="#features">Features</a>
-3. <a href="#technologies-used">Technologies used</a>
-4. <a href="#testing">Testing</a>
-5. <a href="#bugs">Bugs</a>
-6. <a href="#validator-testing">Validator testing</a>
-7. <a href="#deployment">Deployment</a>
-8. <a href="#credits">Credits</a>
-9. <a href="#acknowledgements">Acknowledgements</a>
+3. <a href="#usability">Usability</a>
+4. <a href="#technologies-used">Technologies used</a>
+5. <a href="#testing">Testing</a>
+6. <a href="#bugs">Bugs</a>
+7. <a href="#validator-testing">Validator testing</a>
+8. <a href="#deployment">Deployment</a>
+9. <a href="#credits">Credits</a>
+10. <a href="#acknowledgements">Acknowledgements</a>
 
-# UX Design
+## UX Design
 
-# Features
+## Features
 
 ### Home page
 
@@ -28,14 +29,34 @@ Below the instructions, there is the "Start!" button, taking the user directly t
 
 ### Game page
 
-
+### Final score page
 
 ## Features left to implement
 Add variations of images depending of user cultural background
 
+- Add a counter to the game to increase the tension involved and make the game more involving.
+
+## Usability
+
+The game is designed to be intuitive and user-friendly, ensuring that players of all ages and backgrounds can easily engage with it. Upon launching the game, users are greeted with a welcome screen that provides an overview of the game's purpose and instructions on how to play. The user can start the game by clicking the "Start!" button, which initiates the first round.
+
+During each round, the game presents the user with four images, each depicting different emotional expressions, and displays an emotion name at the top of the page. The user must click on the image that best represents the given emotion. The core functionality of the game revolves around several key functions:
+
+1. startNewGame(): This function initializes a new game session, resetting the current round, score, incorrect answer count, and the list of correctly guessed emotions. It hides the home screen and displays the game screen.
+
+2. nextRound(): This function sets up the next round of the game. It randomly selects four emotions, ensuring that previously correctly guessed emotions are excluded, and assigns these emotions to the four images. One of these emotions is chosen as the correct answer, which is displayed at the top of the screen.
+
+3. checkAnswer(selectedEmotion, correctEmotion, img): This function is triggered when the user clicks on an image. It checks if the selected emotion matches the correct emotion. If correct, the image's border turns green, and if incorrect, it turns red. The game then waits for a short duration before proceeding to the next round or displaying the final score if all rounds are completed.
+
+4. showFinalScore(): Once all rounds are completed, this function displays the user's final score, including the number of correct and incorrect answers.
+
+5. restartGame(): This function allows the user to restart the game without returning to the initial instruction screen, enabling continuous play and practice.
+
+6. backToInstructions(): This function takes the user back to the home screen with the instructions, in case they need a refresher on how to play the game.
+
 # Technologies used
 - Adobe Photoshop to create image for favicon
-- ![link to favicon converter website](https://favicon.io/favicon-converter/) to create favicon files
+- [Favicon converter website](https://favicon.io/favicon-converter/) to create favicon files
 
 # Testing
     function startNewGame() {
