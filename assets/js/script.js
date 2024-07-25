@@ -101,14 +101,16 @@ function nextRound() {
     clearInterval(timer); // Clear any existing time left on timer
     timer = setInterval(updateTimer, 1000); // Start the countdown
 }
-
+/*
+* Fcuntion to update time
+*/
 function updateTimer(){
     remainingTime--;
     timerDisplay.textContent = remainingTime;
     if (remainingTime <= 0){
-        clearInterval();
+        clearInterval(timer);
         nextRound();
-    }
+    }  
 }
 /**
  * Function to check the selected answer
