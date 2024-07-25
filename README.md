@@ -30,7 +30,7 @@ The game’s design ensures that it is accessible to a wide range of users, incl
 
 ### Feedback Mechanism:
 
-Visual feedback through color changes in the image borders helps reinforce learning by clearly indicating correct and incorrect choices. This immediate feedback loop helps users quickly understand their mistakes and improve their recognition skills.
+Visual feedback through color changes in the image shadow-box helps reinforce learning by clearly indicating correct and incorrect choices. This immediate feedback loop helps users quickly understand their mistakes and improve their recognition skills.
 
 ### Consistency:
 
@@ -238,3 +238,5 @@ Emotions were taken from the ["Wheel of emotions"](https://www.6seconds.org/2022
 Idea to change `div` display attribute instead of creating a new page came from my mentor Alan Bushell's [Geo Masters project](https://github.com/Alan-Bushell/geo-masters/)
 
 # Acknowledgements
+- To my mentor Alan Bushell for great counceling and positive reiforcement
+- To my wife Kyra Sendler for giving psychological insight, user testing and telling me to take breaks
