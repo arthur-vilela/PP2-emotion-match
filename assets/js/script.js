@@ -7,6 +7,7 @@ const instructionsBtn = document.getElementById("instructions");
 
 const emotionDisplay = document.getElementById("emotion");
 const images = document.querySelectorAll("#images img");
+const timerDisplay = document.getElementById("timer");
 
 let emotions = {
     Grief: 'assets/images/grief.webp',
