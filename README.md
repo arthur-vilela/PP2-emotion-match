@@ -1,5 +1,7 @@
 # Emotion Match Game
 
+![Screenshot of the website in different screensizes](docs/view-different-devices.png)
+
 The Emotion Match Game is a online quiz game designed to improve people's emotion literacy by increasing their emotional vocabulary and thus to better express their feelings. The concept of the emotion wheel is widely present in the psychology field as well as schools. The game will be useful for people who  can't easily read emotional cues in social situations. That includes children, emotionally blocked adults and people with mental diagnostics that affect their social abilities.
 
 The user must match the randomly given emotion with the image that best depicts it, increasing their final score.
@@ -25,11 +27,15 @@ The user must match the randomly given emotion with the image that best depicts 
 The landing page includes a title, a welcome message, the goal of the game and a list of instructions. From the get go, the user know what the game is about, why and how to play it.
 Below the instructions, there is the "Start!" button, taking the user directly to the first round of the game.
 
-![Screenshot of the game's homepage](docs/home-page-screeshot.png)
+![Screenshot of the game's homepage](docs/home-page.png)
 
 ### Game page
 
+![Screenshot of the game's quiz page](docs/game-page.png)
+
 ### Final score page
+
+![Screenshot of the game's final score page](docs/final-score-page.png)
 
 ## Features left to implement
 
@@ -69,6 +75,7 @@ During each round, the game presents the user with four images, each depicting d
 |[Optimizilla](https://imagecompressor.com/)| Compress images
 |[WEBP Converter](https://cloudconvert.com/webp-converter)| Convert jpg/png images to webp format
 |[Favicon.io](https://favicon.io/favicon-converter/) | Create favicon files
+|[AmIResponsive](https://ui.dev/amiresponsive?url=https://arthur-vilela.github.io/PP2-emotion-match/) | View and screenshot page in different devices
 
 ## Testing
 
@@ -112,7 +119,8 @@ By running the game multiple times and observing the console output on Chrome De
 
     ![screenshot of game home page without showing top padding](docs/bug-top-padding.png)
 
-- When viewed on mobile devices, the `homePageDiv` and the `finalScoreDiv` where not centered vertically on the page. This was fixed by adding a function `updateBodyHeight()` to change the `body` height from 100vh to 100% and back to 100vh depending 
+- When viewed on mobile devices, the `homePageDiv` and the `finalScoreDiv` where not centered vertically on the page. This was fixed by adding a function changing the `<body` height attribute to 100% on mobile devices and to 100vh on larger screens
+
 - Final score didn't update, keeping the placeholder text at the end of game.
 
     ![screenshot of final score screen with placeholder text instead of score](docs/bug-final-score.png)
@@ -138,22 +146,29 @@ By running the game multiple times and observing the console output on Chrome De
 
 - One image wouldn't show and was described as undefined when playing the game. This happened after creating an array to contain the already chosen correct answers.
 
-    To fix it, I corrected the logic in `getRandomEmotions` function to properly filter out already guessed emotions and select random emotions from the available ones.
+    - To fix it, I corrected the logic in `getRandomEmotions` function to properly filter out already guessed emotions and select random emotions from the available ones.
 
 # Validator testing
 
 # Deployment
 
+The site was deployed to GitHub pages. 
+The steps to deploy are as follows:
+- In the GitHub repository, navigate to the `Settings` tab
+From the `Source` section drop-down menu, select the `Master Branch`
+- In the next drop-down menu, select the `/root` option.
+- Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+- The live link can be found here 
+
+    >https://arthur-vilela.github.io/PP2-emotion-match/
+
 # Credits
-https://stackoverflow.com/questions/2532218/pick-random-property-from-a-javascript-object Logic to obtain random emotions from the emotion object was adapted from this answer
+[Stackoverflow](https://stackoverflow.com/questions/2532218/pick-random-property-from-a-javascript-object) | Logic to obtain random emotions from the emotion object was adapted from this answer
 
-https://www.w3schools.com/jsref/jsref_foreach.asp Explanation and examples of the "forEach" method were taken from this tutorial from W3Schools
+[W3Schools](https://www.w3schools.com/jsref/jsref_foreach.asp) | Explanation and examples of the "forEach" method were taken from this tutorial
 
-Emotions were taken from the "Wheel of emotions" developed by psychologist Robert Plutchik
+Emotions were taken from the ["Wheel of emotions"](https://www.6seconds.org/2022/03/13/plutchik-wheel-emotions/) developed by psychologist Robert Plutchik
 
-https://www.6seconds.org/2022/03/13/plutchik-wheel-emotions/
-
-Change message 
-of final score from "final score" to "Correct answers"
+Idea to change `div` display attribute instead of creating a new page came from my mentor Alan Bushell's [Geo Masters project](https://github.com/Alan-Bushell/geo-masters/)
 
 # Acknowledgements
