@@ -101,6 +101,7 @@ function nextRound() {
     clearInterval(timer); // Clear any existing time left on timer
     timer = setInterval(updateTimer, 1000); // Start the countdown
 }
+
 /*
 * Fcuntion to update time
 */
@@ -118,14 +119,15 @@ function updateTimer(){
 function checkAnswer(img, selectedEmotion, correctEmotion) {
     if (selectedEmotion === correctEmotion) {
         img.classList.add("correct"); // Add green border for correct answer
-        score++; // Increase correct answer score
+        score += remainingTime; // Increase score by remaining time
         correctGuesses.push(correctEmotion); // Add the correct emotion to the array
     } else {
         img.classList.add("incorrect");
         wrongAnswers++; // Increase wrong answer counter, and don't forget to change the alert for a more positive one
     }
 
-    // Wait for 0.7 second before moving to the next round
+    /* Wait for 0.7 second before moving to the next round
+    * so the user can see the shadow-box */
     setTimeout(() => {
         nextRound(); // Move to next round
     }, 700);
