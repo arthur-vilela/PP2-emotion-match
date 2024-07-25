@@ -20,6 +20,26 @@ The user must match the randomly given emotion with the image that best depicts 
 
 ## UX Design
 
+### Engagement:
+
+The game is designed to keep users engaged through immediate feedback and progressive difficulty. Each round presents a new set of images and emotions, maintaining the user's interest and providing continuous learning opportunities.
+
+### Accessibility:
+
+The game’s design ensures that it is accessible to a wide range of users, including children and individuals with social or emotional learning challenges. Simple language, clear images, and intuitive controls make it easy for anyone to play and learn.
+
+### Feedback Mechanism:
+
+Visual feedback through color changes in the image borders helps reinforce learning by clearly indicating correct and incorrect choices. This immediate feedback loop helps users quickly understand their mistakes and improve their recognition skills.
+
+### Consistency:
+
+The game maintains a consistent design language throughout all screens, using a cohesive color scheme, typography, and layout. This consistency helps users focus on the content and the learning process without being distracted by changing interfaces.
+
+### Motivation:
+
+By tracking and displaying the user’s score, the game provides a sense of achievement and encourages repeat play. Users are motivated to improve their scores and, consequently, their emotional literacy.
+
 ## Features
 
 ### Home page
