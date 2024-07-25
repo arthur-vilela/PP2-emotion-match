@@ -58,8 +58,13 @@ function getRandomEmotions(emotions, count) {
  * Function to update body height based on the displayed page
  */
 function updateBodyHeight() {
-    if (gamePageDiv.style.display === "block") {
-        document.body.style.height = "100%";
+    const isMobile = window.matchMedia("(max-width: 600px)").matches; // Check resolution to change the height only on mobile devices
+    if (isMobile) {
+        if (gamePageDiv.style.display === "block") {
+            document.body.style.height = "100%";
+        } else {
+            document.body.style.height = "100vh";
+        }
     } else {
         document.body.style.height = "100vh";
     }

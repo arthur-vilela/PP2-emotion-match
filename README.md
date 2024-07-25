@@ -112,6 +112,7 @@ By running the game multiple times and observing the console output on Chrome De
 
     ![screenshot of game home page without showing top padding](docs/bug-top-padding.png)
 
+- When viewed on mobile devices, the `homePageDiv` and the `finalScoreDiv` where not centered vertically on the page. This was fixed by adding a function `updateBodyHeight()` to change the `body` height from 100vh to 100% and back to 100vh depending 
 - Final score didn't update, keeping the placeholder text at the end of game.
 
     ![screenshot of final score screen with placeholder text instead of score](docs/bug-final-score.png)

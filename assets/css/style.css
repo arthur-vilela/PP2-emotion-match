@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-    max-width: 90%;
+    margin: 15px;
     background-color: #ffffff;
     padding: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -78,12 +78,12 @@ img {
 
 .correct {
     box-shadow: 0 0px 10px 5px rgb(1, 135, 10);
-    transition: filter 0.4s ease;
+    transition: 0.2s ease;
 }
 
 .incorrect {
     box-shadow: 0 0px 10px 5px rgb(150 10 10);
-    transition: 0.4s ease;
+    transition: 0.2s ease;
 }
 
 /* Final score page */
@@ -102,7 +102,7 @@ img {
     }
 
     .container {
-        width: 80%;
+        width: fit-content;
         padding: 15px;
     }
 
