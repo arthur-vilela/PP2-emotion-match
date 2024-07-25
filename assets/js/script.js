@@ -85,22 +85,29 @@ function nextRound() {
     const correctEmotionIndex = Math.floor(Math.random() * 4); // Select a random index for the correct answer
     const correctEmotion = selectedEmotions[correctEmotionIndex];
 
-    console.log("Selected Emotions:", selectedEmotions); // Log selected and correct emotion for debuging
-    console.log("Correct Emotion Index:", correctEmotionIndex);
-    console.log("Correct Emotion:", correctEmotion);
-
     emotionDisplay.textContent = correctEmotion; // Display the correct emotion name in HTML
 
     images.forEach((img, index) => {
         img.src = emotions[selectedEmotions[index]]; // Assign the src and alt attributes of each image element based on the randomly selected emotions.
         img.alt = selectedEmotions[index];
         img.onclick = () => checkAnswer(img, selectedEmotions[index], correctEmotion);
-        img.classList.remove("correct", "incorrect"); // Remove any colorful borders
+        img.classList.remove("correct", "incorrect"); // Remove shadow-box
     });
 
     currentRound++; // Increase round counter
+
+    clearInterval(timer); // Clear any existing time left on timer
+    timer = setInterval(updateTimer, 6000); // Start the countdown
 }
 
+function updateTimer(){
+    remainingTime--;
+    timerDisplay.textContent = remainingTime;
+    if (remainingTime <= 0){
+        clearInterval();
+        nextRound();
+    }
+}
 /**
  * Function to check the selected answer
  */
