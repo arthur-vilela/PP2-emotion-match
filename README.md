@@ -40,7 +40,11 @@ The game maintains a consistent design language throughout all screens, using a 
 
 ![Four squares, one white, one dark green, one olive green and one dark grey](docs/colour-scheme.png)
 
+#### Favicon
 
+The favicon was adapted from the original rendering of the Wheel of Emotions by Robert Plutchik, keeping the connection between the game and the original concept.
+
+![Icon depicting a flower with different coloured pethals](assets/favicon/android-chrome-192x192.png)
 
 ### Motivation:
 
@@ -50,28 +54,57 @@ By tracking and displaying the user’s score, the game provides a sense of achi
 
 ### Home page
 
-The landing page includes a title, a welcome message, the goal of the game and a list of instructions. From the get go, the user know what the game is about, why and how to play it.
-Below the instructions, there is the "Start!" button, taking the user directly to the first round of the game.
+The landing page includes:
+- A title
+- A welcome message
+- The goal of the game 
+- A list of instructions
+- A Start button
+- An icon linking to the project's GitHub page
+
+ From the get go, the user knows what the game is about, why and how to play it.
+Below the instructions, there is the centralized "Start!" button, taking the user directly to the first round of the game.
 
 ![Screenshot of the game's homepage](docs/home-page.png)
 
 ### Game page
 
+The game page includes:
+
+- A short instruction
+- The emotion to be guessed
+- Four images depicting different emotions
+- An icon linking to the project's GitHub page
+
+When clicked, a box-shadow will appear around the image. It will be either green if correctly guessed or red if wrongly.
+
 ![Screenshot of the game's quiz page](docs/game-page.png)
 
 ### Final score page
+
+The final score page includes:
+
+- A short message to the user
+- A tally with the correct answers
+- A tally with the wrong answers
+- A short invitation to play one more time
+- A Restart button
+- An Instructions button
+
+The Instructions button will take the user back to the home page and the Restart button to a new first round, eliminating the need for using the "back button".
 
 ![Screenshot of the game's final score page](docs/final-score-page.png)
 
 ## Features left to implement
 
-- Add variations of images depending of user cultural background
+- Add variations of images depending of user cultural background.
+    - Since different cultures have different physical reactions and expression to different emotions, one interesting features to be implemented in the future could be a variation in images or emotions depending on the user's origin.
 
 - Add a counter to the game to increase the tension involved and make the game more involving.
 
 ## Usability
 
-The game is designed to be intuitive and user-friendly, ensuring that players of all ages and backgrounds can easily engage with it. Upon launching the game, users are greeted with a welcome screen that provides an overview of the game's purpose and instructions on how to play. The user can start the game by clicking the "Start!" button, which initiates the first round.
+The game is designed to be intuitive and user-friendly. Upon launching the game, users are greeted with a welcome screen that provides an overview of the game's purpose and instructions on how to play. The user can start the game by clicking the "Start!" button, which initiates the first round.
 
 During each round, the game presents the user with four images, each depicting different emotional expressions, and displays an emotion name at the top of the page. The user must click on the image that best represents the given emotion. The core functionality of the game revolves around several key functions:
 
@@ -95,6 +128,7 @@ During each round, the game presents the user with four images, each depicting d
 |--|--|
 |HTML| Structure the webpage
 |CSS| Style and add layout to the project
+|JavaScript| Make the website interactive; keep score based on the users choices and present the scores to them
 |[Font Awesome](https://fontawesome.com/)| Used for the GitHub icon
 |[GoogleFonts](https://fonts.google.com/)| Research, pair and add fonts to the project
 |Adobe Photoshop| Create the favicon logo
@@ -120,18 +154,6 @@ During each round, the game presents the user with four images, each depicting d
 |The restart button on the final page starts a new play|Pass|
 |The round counter, score and wrong answer tally are zeroed when the game is restarted|Pass|
 |The "Instructions" button in the final page returns to the home page|Pass|
-
-    function startNewGame() {
-        homePageDiv.style.display = "none";
-        gamePageDiv.style.display = "block";
-
-        const selectedEmotions = getRandomEmotions(emotions, 4);
-        const correctEmotionIndex = Math.floor(Math.random() * 4);
-        const correctEmotion = selectedEmotions[correctEmotionIndex];
-
-        console.log("Selected Emotions:", selectedEmotions);
-        console.log("Correct Emotion Index:", correctEmotionIndex);
-        console.log("Correct Emotion:", correctEmotion);
 
 By running the game multiple times and observing the console output on Chrome Devtools, I verified that the correct emotion appears in a random position each time. The correctEmotionIndex will vary between 0 and 3, ensuring the correct emotion's image is displayed in a different position for each game round.
 
