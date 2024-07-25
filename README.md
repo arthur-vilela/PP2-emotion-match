@@ -51,6 +51,26 @@ The favicon was adapted from the original rendering of the Wheel of Emotions by 
 By tracking and displaying the user’s score, the game provides a sense of achievement and encourages repeat play. Users are motivated to improve their scores and, consequently, their emotional literacy.
 The time creates a feeling of challenge and urgency, making the game more compelling.
 
+### Wireframes
+
+- The website layout is highly simple and centralized. Divs with curved edges were chosen to give a lighter mood to the game. Simple design also helps with clarity and navigation. All buttons are acessible with your thumb closer to the bottom of the page, which can be useful for users with large cellphones.
+
+#### Home page mobile
+
+![Wireframe of the home screen on mobile device](docs/framework-hmpg-mob.png)
+
+#### Game page mobile
+
+![Wireframe of the game screen on mobile device](docs/framework-gmpg-mob.png)
+
+#### Final score page mobile
+
+![Wireframe of the final score screen on mobile device](docs/framework-scpg-mob.png)
+
+#### Game page desktop
+
+![Wireframe of the game screen on desktop device](docs/framework-gmpg-desk.png)
+
 ## Features
 
 ### Home page
