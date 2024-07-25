@@ -12,10 +12,10 @@ const timerDisplay = document.getElementById("timer");
 let emotions = {
     Grief: 'assets/images/grief.webp',
     Amazement: 'assets/images/amazement.webp',
-    Terror: 'assets/images/terror.webp',
+    Pensiveness: 'assets/images/pensiveness.webp',
     Admiration: 'assets/images/admiration.webp',
-    Ecstasy: 'assets/images/ecstasy.webp',
-    Vigilance: 'assets/images/vigilance.webp',
+    Loneliness: 'assets/images/loneliness.webp',
+    Serenity: 'assets/images/serenity.webp',
     Rage: 'assets/images/rage.webp',
     Loathing: 'assets/images/loathing.webp',
     Sadness: 'assets/images/sadness.webp',
@@ -23,7 +23,7 @@ let emotions = {
     Fear: 'assets/images/fear.webp',
     Trust: 'assets/images/trust.webp',
     Joy: 'assets/images/joy.webp',
-    Anticipation: 'assets/images/anticipation.webp',
+    Boredom: 'assets/images/boredom.webp',
     Anger: 'assets/images/anger.webp',
     Disgust: 'assets/images/disgust.webp'
 };
