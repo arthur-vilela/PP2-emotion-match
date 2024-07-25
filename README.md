@@ -203,11 +203,21 @@ By running the game multiple times and observing the console output on Chrome De
 
 # Validator testing
 
-### HTML
+### HTML W3C Validator
 
-### CSS
+![Screenshot of W3C HTML validator showing no errors](docs/html-validator.png)
+- No errors or warnings shown.
+
+### CSS W3C Validator
 
 ![Screenshot of W3C CSS validator showing no errors](docs/css-validator.png)
+- No errors found.
+
+### JSHint
+
+- No warnings shown.
+
+![Screenshot of JSHint result showing no warnings](docs/js-hint.png)
 
 ### Lighthouse
 
@@ -221,6 +231,8 @@ By running the game multiple times and observing the console output on Chrome De
 #### Desktop
 
 ![Screenshot of Lighthouse score results displaying 100% in Accessibility and 99% in Performance](docs/lighthouse-desktop.png)
+
+
 # Deployment
 
 The site was deployed to GitHub pages. 
