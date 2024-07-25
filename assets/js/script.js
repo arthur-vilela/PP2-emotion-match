@@ -99,7 +99,7 @@ function nextRound() {
     currentRound++; // Increase round counter
 
     clearInterval(timer); // Clear any existing time left on timer
-    timer = setInterval(updateTimer, 6000); // Start the countdown
+    timer = setInterval(updateTimer, 1000); // Start the countdown
 }
 
 function updateTimer(){
