@@ -85,7 +85,7 @@ When clicked, a box-shadow will appear around the image. It will be either green
 #### Countdown
 
 To create a more dynamic experience, I added a countdown timer on top of the given emotion. The timer starts at 10 seconds and, when it drops to zero, a new round is started.
-If the user clicks, either correctly or incorrectly, on an image, the amount of seconds left in the timer are added to the overall score.
+If the user clicks on an image, either correctly or incorrectly, the amount of seconds left in the timer are added to the overall score.
 
 ### Final score page
 
@@ -222,15 +222,15 @@ By running the game multiple times and observing the console output on Chrome De
 ### Lighthouse
 
 - Lighthouse in devtools indicated a high accessibility score.
-- Performance score varied when analysing  the `mobile` or `desktop` versions.
+- Performance score varied minimally when analysing  the `mobile` or `desktop` versions.
 
 #### Mobile
 
-![Screenshot of Lighthouse score results displaying 99% in Performance, 95% in Accessibility, 100% in Best Practices and 100% in SEO](docs/lighthouse-mobile.png)
+![Screenshot of Lighthouse score results displaying 99% in Performance, 100% in Accessibility, 96% in Best Practices and 100% in SEO](docs/lighthouse-mobile.png)
 
 #### Desktop
 
-![Screenshot of Lighthouse score results displaying 100% in Accessibility and 99% in Performance](docs/lighthouse-desktop.png)
+![Screenshot of Lighthouse score results displaying 100% in Performance, 100% in Accessibility, 96% in Best Practices and 100% in SEO](docs/lighthouse-desktop.png)
 
 
 # Deployment
