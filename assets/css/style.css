@@ -7,13 +7,13 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: rgb(25, 145, 145);
-    color: #333;
+    background-color: #199191;
+    color: #333333;
 }
 
 .container {
     margin: 15px;
-    background-color: #ffffff;
+    background-color: #fafafa;
     padding: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -22,7 +22,7 @@ body {
 
 header h1 {
     font-size: 2em;
-    color: rgb(16, 92, 92);
+    color: #105c5c;
     margin-bottom: 20px;
     font-family: "Noto Sans Display", sans-serif;
     font-weight: 700;
@@ -30,7 +30,7 @@ header h1 {
 
 #github-logo {
     font-size: 3em;
-    color: #ffffff;
+    color: #fafafa;
 }
 
 #start-page p,
@@ -64,7 +64,7 @@ button {
 }
 
 button:hover {
-    background-color: rgb(16, 92, 92);
+    background-color: #105c5c;
     transform: translateY(-1px);
 }
 
@@ -85,7 +85,7 @@ img {
 }
 
 .correct {
-    box-shadow: 0 0px 10px 5px rgb(1, 135, 10);
+    box-shadow: 0 0px 10px 5px rgb(33, 121, 39);
     transition: 0.2s ease;
 }
 

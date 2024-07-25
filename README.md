@@ -22,7 +22,7 @@ The user must match the randomly given emotion with the image that best depicts 
 
 ### Engagement:
 
-The game is designed to keep users engaged through immediate feedback and progressive difficulty. Each round presents a new set of images and emotions, maintaining the user's interest and providing continuous learning opportunities.
+The game is designed to keep users engaged through immediate feedback. Each round presents a new set of images and emotions, maintaining the user's interest and providing continuous learning opportunities.
 
 ### Accessibility:
 
@@ -35,6 +35,12 @@ Visual feedback through color changes in the image borders helps reinforce learn
 ### Consistency:
 
 The game maintains a consistent design language throughout all screens, using a cohesive color scheme, typography, and layout. This consistency helps users focus on the content and the learning process without being distracted by changing interfaces.
+
+#### Color scheme
+
+![Four squares, one white, one dark green, one olive green and one dark grey](docs/colour-scheme.png)
+
+
 
 ### Motivation:
 
@@ -170,6 +176,24 @@ By running the game multiple times and observing the console output on Chrome De
 
 # Validator testing
 
+### HTML
+
+### CSS
+
+![Screenshot of W3C CSS validator showing no errors](docs/css-validator.png)
+
+### Lighthouse
+
+- Lighthouse in devtools indicated a high accessibility score.
+- Performance score varied when analysing  the `mobile` or `desktop` versions.
+
+#### Mobile
+
+![Screenshot of Lighthouse score results displaying 99% in Performance, 95% in Accessibility, 100% in Best Practices and 100% in SEO](docs/lighthouse-mobile.png)
+
+#### Desktop
+
+![Screenshot of Lighthouse score results displaying 100% in Accessibility and 99% in Performance](docs/lighthouse-desktop.png)
 # Deployment
 
 The site was deployed to GitHub pages. 
