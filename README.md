@@ -49,6 +49,7 @@ The favicon was adapted from the original rendering of the Wheel of Emotions by 
 ### Motivation:
 
 By tracking and displaying the user’s score, the game provides a sense of achievement and encourages repeat play. Users are motivated to improve their scores and, consequently, their emotional literacy.
+The time creates a feeling of challenge and urgency, making the game more compelling.
 
 ## Features
 
@@ -73,6 +74,7 @@ The game page includes:
 
 - A short instruction
 - The emotion to be guessed
+- A countdown timer
 - Four images depicting different emotions
 - An icon linking to the project's GitHub page
 
@@ -80,12 +82,16 @@ When clicked, a box-shadow will appear around the image. It will be either green
 
 ![Screenshot of the game's quiz page](docs/game-page.png)
 
+#### Countdown
+
+To create a more dynamic experience, I added a countdown timer on top of the given emotion. The timer starts at 10 seconds and, when it drops to zero, a new round is started.
+If the user clicks, either correctly or incorrectly, on an image, the amount of seconds left in the timer are added to the overall score.
+
 ### Final score page
 
 The final score page includes:
 
-- A short message to the user
-- A tally with the correct answers
+- The users final score, being the additional of seconds left every round
 - A tally with the wrong answers
 - A short invitation to play one more time
 - A Restart button
@@ -100,7 +106,6 @@ The Instructions button will take the user back to the home page and the Restart
 - Add variations of images depending of user cultural background.
     - Since different cultures have different physical reactions and expression to different emotions, one interesting features to be implemented in the future could be a variation in images or emotions depending on the user's origin.
 
-- Add a counter to the game to increase the tension involved and make the game more involving.
 
 ## Usability
 
@@ -110,11 +115,11 @@ During each round, the game presents the user with four images, each depicting d
 
 1. `startNewGame()`: This function initializes a new game session, resetting the current round, score, incorrect answer count, and the list of correctly guessed emotions. It hides the home screen and displays the game screen.
 
-2. `nextRound()`: This function sets up the next round of the game. It randomly selects four emotions, ensuring that previously correctly guessed emotions are excluded, and assigns these emotions to the four images. One of these emotions is chosen as the correct answer, which is displayed at the top of the screen.
+2. `nextRound()`: This function sets up the next round of the game. It randomly selects four emotions, ensuring that previously correctly guessed emotions are excluded, and assigns these emotions to the four images. One of these emotions is chosen as the correct answer, which is displayed at the top of the screen. It also resets the countdown every round.
 
-3. `checkAnswer()`: This function is triggered when the user clicks on an image. It checks if the selected emotion matches the correct emotion. If correct, the image's border turns green, and if incorrect, it turns red. The game then waits for a short duration before proceeding to the next round or displaying the final score if all rounds are completed.
+3. `checkAnswer()`: This function is triggered when the user clicks on an image. It checks if the selected emotion matches the correct emotion. If correct, the image's border turns green, and if incorrect, it turns red. The game then waits for a short duration before proceeding to the next round or displaying the final score if all rounds are completed. This waiting time (0.7s) is for the user to be able to see the shadow-box colour change. This function then defines the time left in the countdown and adds it to the score.
 
-4. `showFinalScore()`: Once all rounds are completed, this function displays the user's final score, including the number of correct and incorrect answers.
+4. `showFinalScore()`: Once all rounds are completed, this function displays the user's final score by, including the number of incorrect answers.
 
 5. `restartGame()`: This function allows the user to restart the game without returning to the initial instruction screen, enabling continuous play and practice.
 
