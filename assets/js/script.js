@@ -86,7 +86,7 @@ function nextRound() {
     const correctEmotion = selectedEmotions[correctEmotionIndex];
 
     emotionDisplay.textContent = correctEmotion; // Display the correct emotion name in HTML
-    remainingTime = 6; // Reset timer every round
+    remainingTime = 10; // Reset timer every round
     timerDisplay.textContent = remainingTime;
 
     images.forEach((img, index) => {
