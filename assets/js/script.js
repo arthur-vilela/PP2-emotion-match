@@ -28,6 +28,25 @@ let emotions = {
     Disgust: 'assets/images/disgust.webp'
 };
 
+let altTexts = {
+    Grief: 'An old person with their head down, and both hands on their head',
+    Amazement: 'Three people with a surprised expression, eyes wide open and mouth slightly agape',
+    Pensiveness: 'A person looking distantly, with their hand on their chin',
+    Admiration: 'A person looking up with a slight smile surrounded by forest',
+    Loneliness: 'A person looking down, raised eyebrowns, closed arms, hands on elbows',
+    Serenity: 'A person under open sky with a calm expression, eyes closed',
+    Rage: 'A shirtless person, eyebrows furrowed, tense muscles and mouth open as if shouting',
+    Loathing: 'A person with their head tilted front, furrowed eyebrowns, staring intensily',
+    Sadness: 'A person wiping tears from their eyes, eyes downcast and trembling mouth',
+    Surprise: 'A person with eyes  and mouth wide open',
+    Fear: 'A person with crossed arms in front of their chest, eyes wide and mouth open as if gasping',
+    Trust: 'A person with a slight smile, relaxed eyes, hugging closely someone else',
+    Joy: 'A person smiling widely with eyes crinkled',
+    Boredom: 'A person with their head tilted back, eyes slightly closed, little expressiveness',
+    Anger: 'A person with frowning eyebrows, flared nostrils and mouth in a snarl',
+    Disgust: 'A person with a shrugged arms, eyes sligthly closed, nose wrinkled and furrowed eyebrowns',
+};
+
 // Global initial variables
 let currentRound = 0; // Track the current round
 const totalRounds = 6; // Total number of rounds
