@@ -124,10 +124,10 @@ function checkAnswer(img, selectedEmotion, correctEmotion) {
         wrongAnswers++; // Increase wrong answer counter, and don't forget to change the alert for a more positive one
     }
 
-    // Wait for 1 second before moving to the next round
+    // Wait for 0.7 second before moving to the next round
     setTimeout(() => {
         nextRound(); // Move to next round
-    }, 1000);
+    }, 700);
 }
 
 /**
