@@ -77,6 +77,8 @@ function startNewGame() {
     wrongAnswers = 0;
     correctGuesses = []; // Reset correct guesses
 
+    updateBodyHeight(); // Update body height
+
     nextRound(); // Start the first round
 }
 
@@ -135,6 +137,7 @@ function checkAnswer(img, selectedEmotion, correctEmotion) {
 function showFinalScore() {
     gamePageDiv.style.display = "none";
     scorePageDiv.style.display = "flex";
+    updateBodyHeight(); // Update body height
 
     // Display the final score on HTML
     document.getElementById("final-score").textContent = `Final score: ${score} | Incorrect answers: ${wrongAnswers}`;
@@ -154,6 +157,7 @@ function restartGame() {
 function backToInstructions() {
     scorePageDiv.style.display = "none";
     homePageDiv.style.display = "block";
+    updateBodyHeight(); // Update body height
 
 }
 
