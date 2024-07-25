@@ -55,22 +55,6 @@ function getRandomEmotions(emotions, count) {
 }
 
 /**
- * Function to update body height based on the displayed page
- */
-function updateBodyHeight() {
-    const isMobile = window.matchMedia("(max-width: 600px)").matches; // Check resolution to change the height only on mobile devices
-    if (isMobile) {
-        if (gamePageDiv.style.display === "block") {
-            document.body.style.height = "100%";
-        } else {
-            document.body.style.height = "100vh";
-        }
-    } else {
-        document.body.style.height = "100vh";
-    }
-}
-
-/**
  * Function to start a new game
  */
 function startNewGame() {
@@ -81,8 +65,6 @@ function startNewGame() {
     score = 0;
     wrongAnswers = 0;
     correctGuesses = []; // Reset correct guesses
-
-    updateBodyHeight(); // Update body height
 
     nextRound(); // Start the first round
 }
@@ -142,7 +124,6 @@ function checkAnswer(img, selectedEmotion, correctEmotion) {
 function showFinalScore() {
     gamePageDiv.style.display = "none";
     scorePageDiv.style.display = "flex";
-    updateBodyHeight(); // Update body height
 
     // Display the final score on HTML
     document.getElementById("final-score").textContent = `Final score: ${score} | Incorrect answers: ${wrongAnswers}`;
@@ -162,7 +143,6 @@ function restartGame() {
 function backToInstructions() {
     scorePageDiv.style.display = "none";
     homePageDiv.style.display = "block";
-    updateBodyHeight(); // Update body height
 
 }
 
