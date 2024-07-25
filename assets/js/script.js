@@ -142,7 +142,8 @@ function showFinalScore() {
     scorePageDiv.style.display = "flex";
 
     // Display the final score on HTML
-    document.getElementById("final-score").textContent = `Correct answers: ${score} | Incorrect answers: ${wrongAnswers}`;
+    document.getElementById("final-score").textContent = `${score}`
+    document.getElementById("wrong-answers").textContent= ` Incorrect answers: ${wrongAnswers}`;
 }
 
 /**
