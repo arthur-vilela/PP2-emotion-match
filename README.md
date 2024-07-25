@@ -229,14 +229,22 @@ From the `Source` section drop-down menu, select the `Master Branch`
     >https://arthur-vilela.github.io/PP2-emotion-match/
 
 # Credits
-[Stackoverflow](https://stackoverflow.com/questions/2532218/pick-random-property-from-a-javascript-object) | Logic to obtain random emotions from the emotion object was adapted from this answer
+- [Stackoverflow](https://stackoverflow.com/questions/2532218/pick-random-property-from-a-javascript-object) | Logic to obtain random emotions from the emotion object was adapted from this answer
 
-[W3Schools](https://www.w3schools.com/jsref/jsref_foreach.asp) | Explanation and examples of the "forEach" method were taken from this tutorial
+- [W3Schools](https://www.w3schools.com/jsref/jsref_foreach.asp) | Explanation and examples of the "forEach" method were taken from this tutorial
 
-Emotions were taken from the ["Wheel of emotions"](https://www.6seconds.org/2022/03/13/plutchik-wheel-emotions/) developed by psychologist Robert Plutchik
+- [Mdn Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) | Explanation and syntax for arrow function (=>)
 
-Idea to change `div` display attribute instead of creating a new page came from my mentor Alan Bushell's [Geo Masters project](https://github.com/Alan-Bushell/geo-masters/)
+- Emotions were taken from the ["Wheel of emotions"](https://www.6seconds.org/2022/03/13/plutchik-wheel-emotions/) developed by psychologist Robert Plutchik
+
+- Idea to change `div` display attribute instead of creating a new page came from my mentor Alan Bushell's [Geo Masters project](https://github.com/Alan-Bushell/geo-masters/)
+
+- Base for creating round timer div came from [this answer on GeeksForGeeks](https://www.geeksforgeeks.org/how-to-add-a-circle-around-a-number-in-css/)
+
+- All images were taken from the [Pexels](https://www.pexels.com/) website
+
+- The base for the README.md file was taken from [Code Institute readme template](https://github.com/Code-Institute-Solutions/readme-template) on Github. 
 
 # Acknowledgements
-- To my mentor Alan Bushell for great counceling and positive reiforcement
-- To my wife Kyra Sendler for giving psychological insight, user testing and telling me to take breaks
+- My mentor Alan Bushell for great counceling and positive reiforcement
+- My wife Kyra Sendler for giving psychological insight, user testing and telling me to take breaks
