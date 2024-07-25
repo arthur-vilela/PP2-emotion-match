@@ -34,6 +34,8 @@ const totalRounds = 6; // Total number of rounds
 let score = 0; // Track correct answers
 let wrongAnswers = 0; // Track incorrect answers
 let correctGuesses = []; // Array to store the correctly guessed emotions
+let timer; // Variable to hole timer intervalo
+let remainingTime; // Variable to keep track of remaing time
 
 /**
  * Function to get random emotions from the emotions object
