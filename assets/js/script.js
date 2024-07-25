@@ -109,8 +109,8 @@ function nextRound() {
     timerDisplay.textContent = remainingTime;
 
     images.forEach((img, index) => {
-        img.src = emotions[selectedEmotions[index]]; // Assign the src and alt attributes of each image element based on the randomly selected emotions.
-        img.alt = selectedEmotions[index];
+        img.src = emotions[selectedEmotions[index]]; // Assign the src based on the randomly selected emotions.
+        img.alt = altTexts[index]; // Assign alt text to each image element
         img.onclick = () => checkAnswer(img, selectedEmotions[index], correctEmotion);
         img.classList.remove("correct", "incorrect"); // Remove shadow-box
     });
