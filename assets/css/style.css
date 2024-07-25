@@ -78,6 +78,23 @@ button:hover {
     font-family: "Noto Sans Display", sans-serif;
 }
 
+#timer {
+    font-size: 300%;
+    font-weight: 700;
+    color: #fafafa;
+    display: inline-block;
+    padding-top: 50%; 
+    padding-bottom: 50%;
+}
+
+.circle {
+    background-color: #105c5c;
+    border-radius: 50%;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    line-height: 0px;
+}
 img {
     width: 200px;
     margin: 15px;
