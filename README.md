@@ -66,7 +66,13 @@ The landing page includes:
  From the get go, the user knows what the game is about, why and how to play it.
 Below the instructions, there is the centralized "Start!" button, taking the user directly to the first round of the game.
 
+#### Desktop
+
 ![Screenshot of the game's homepage](docs/home-page.png)
+
+#### Mobile
+
+![Screenshot of the game's homepage on a cellphone screen](docs/home-page-mobile.jpg)
 
 ### Game page
 
@@ -80,7 +86,13 @@ The game page includes:
 
 When clicked, a box-shadow will appear around the image. It will be either green if correctly guessed or red if wrongly.
 
+#### Desktop
+
 ![Screenshot of the game's quiz page](docs/game-page.png)
+
+#### Mobile
+
+![Screenshot of the game's quiz page on a cellphone screen](docs/game-page-mobile.jpg)
 
 #### Countdown
 
@@ -99,7 +111,13 @@ The final score page includes:
 
 The Instructions button will take the user back to the home page and the Restart button to a new first round, eliminating the need for using the "back button".
 
+#### Desktop
+
 ![Screenshot of the game's final score page](docs/final-score-page.png)
+
+#### Mobile
+
+![Screenshot of the game's final score page on a cellphone screen](docs/final-score-page-mobile.jpg)
 
 ## Features left to implement
 
@@ -150,10 +168,11 @@ During each round, the game presents the user with four images, each depicting d
 |The home page is hidden when the start button is clicked |Pass|
 |The game page displays when the start button is clicked |Pass|
 |A new round is started when the start button is clicked |Pass|
+|The countdown is restarted when a new round starts |Pass|
 |The images displayed are randomly chosen every round |Pass|
 |The correctly guessed emotion is not shown again in the next round within the same play|Pass|
-|The image displays a green border when correctly clicked|Pass|
-|The image displays a red border when incorrectly clicked|Pass|
+|The image displays a green shadow when correctly clicked|Pass|
+|The image displays a red shadow when incorrectly clicked|Pass|
 |The score is calculated and displayed on the final page|Pass|
 |The wrong answer tally is calculated and displayed on the final page|Pass|
 |The restart button on the final page starts a new play|Pass|
