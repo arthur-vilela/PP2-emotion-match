@@ -2,7 +2,6 @@ const homePageDiv = document.getElementById("start-page");
 const gamePageDiv = document.getElementById("start-game-div");
 const scorePageDiv = document.getElementById("final-score-div");
 const startGameBtn = document.getElementById("start-game-btn");
-const checkScoreBtn = document.getElementById("check-score-btn");
 const restartBtn = document.getElementById("restart");
 const instructionsBtn = document.getElementById("instructions");
 
@@ -149,6 +148,5 @@ function backToInstructions() {
 
 // Event listeners for buttons
 startGameBtn.addEventListener("click", startNewGame);
-checkScoreBtn.addEventListener("click", showFinalScore);
 restartBtn.addEventListener("click", restartGame);
 instructionsBtn.addEventListener("click", backToInstructions);
