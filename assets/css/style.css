@@ -108,6 +108,11 @@ img {
         padding: 15px;
     }
 
+    img {
+        width: 140px;
+        margin: 5px;
+    }
+
     #start-game {
         width: 90%;
         padding: 10px 0;
