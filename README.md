@@ -246,5 +246,5 @@ From the `Source` section drop-down menu, select the `Master Branch`
 - The base for the README.md file was taken from [Code Institute readme template](https://github.com/Code-Institute-Solutions/readme-template) on Github. 
 
 # Acknowledgements
-- My mentor Alan Bushell for great counceling and positive reiforcement
+- My mentor Alan Bushell for great counceling and positive reinforcement
 - My wife Kyra Sendler for giving psychological insight, user testing and telling me to take breaks

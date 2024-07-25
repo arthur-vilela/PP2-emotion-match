@@ -118,6 +118,14 @@ img {
     align-items: center;
 }
 
+#final-score {
+    color: #105c5c;
+    font-size: 200%;
+    font-weight: 700;
+    position: relative;
+    bottom: 10px;
+}
+
 /* Media queries for mobile */
 @media (max-width: 600px) {
     body {
