@@ -90,6 +90,8 @@ img {
 /* Final score page */
 #final-score-div {
     display: none;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Media queries for mobile */

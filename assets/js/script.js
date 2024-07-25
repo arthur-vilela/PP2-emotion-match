@@ -55,6 +55,17 @@ function getRandomEmotions(emotions, count) {
 }
 
 /**
+ * Function to update body height based on the displayed page
+ */
+function updateBodyHeight() {
+    if (gamePageDiv.style.display === "block") {
+        document.body.style.height = "100%";
+    } else {
+        document.body.style.height = "100vh";
+    }
+}
+
+/**
  * Function to start a new game
  */
 function startNewGame() {
@@ -123,7 +134,7 @@ function checkAnswer(img, selectedEmotion, correctEmotion) {
  */
 function showFinalScore() {
     gamePageDiv.style.display = "none";
-    scorePageDiv.style.display = "block";
+    scorePageDiv.style.display = "flex";
 
     // Display the final score on HTML
     document.getElementById("final-score").textContent = `Final score: ${score} | Incorrect answers: ${wrongAnswers}`;
