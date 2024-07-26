@@ -182,22 +182,28 @@ During each round, the game presents the user with four images, each depicting d
 
 ## Testing
 
-| Test | Result |
-|--|--|
-|The buttons react when hovered | Pass |
-|The home page is hidden when the start button is clicked |Pass|
-|The game page displays when the start button is clicked |Pass|
-|A new round is started when the start button is clicked |Pass|
-|The countdown is restarted when a new round starts |Pass|
-|The images displayed are randomly chosen every round |Pass|
-|The correctly guessed emotion is not shown again in the next round within the same play|Pass|
-|The image displays a green shadow when correctly clicked|Pass|
-|The image displays a red shadow when incorrectly clicked|Pass|
-|The score is calculated and displayed on the final page|Pass|
-|The wrong answer tally is calculated and displayed on the final page|Pass|
-|The restart button on the final page starts a new play|Pass|
-|The round counter, score and wrong answer tally are zeroed when the game is restarted|Pass|
-|The "Instructions" button in the final page returns to the home page|Pass|
+
+
+
+|Test                           |Action                     | Expected result                |Outcome|
+|-------------------------------|---------------------------|--------------------------------|-------|
+|The buttons react when hovered  |Hover mouse over all buttons |Change background and font color, move 1px | Pass |
+|The home page is hidden when the game starts | Click on start button | Hide home page | Pass
+|The game page displays when the start button is clicked | Click on start button | Game page is displayed | Pass |
+|The countdown is restarted when a new game starts | Click on start button | Countdown goes back to 10s | Pass |
+|The countdown is restarted when a new round starts | Click on image; let time run out | Countdown goes back to 10s | Pass |
+|The images displayed are randomly chosen every round | Log on console the images shown and try to identify a pattern | No pattern found | Pass |
+|The correctly guessed emotion is not shown again in the next round within the same play | Play the game several times with different users | No repeated correctly guessed images | Pass |
+|The correct image displays a green shadow when clicked | Click on the correct image | A green shadow appear around image | Pass |
+|The incorrect image displays a red shadow when clicked | Click on an incorrect image | A red shadow appear around image | Pass |
+|The score is calculated and displayed on the final page | Play the game differently several times | Score is correctly shown on final page | Pass |
+|The wrong answer are added and displayed on the final page | Play the game differently several times | Wrong answer tally is correctly shown on final page | Pass |
+|The restart button on the final page starts a new play | Click the restart button on final score page | Restart from the 1st round | Pass |
+|The round counter, score and wrong answer tally are zeroed when the game is restarted | Log rounds, score and wrong answers in new game | All value are zeroed | Pass |
+|The "Instructions" button in the final page returns to the home page | Click on the "Instructions" button | Display home page | Pass |
+|Check responsiveness in different resolutions | Use Devtools to check visual result and usability in different resolutions| Good visual and readability experience | Pass
+|Display in different devices | Open and navigate on Google Pixel 7, iPhone 13 and iPad Air| Similar experience in all devices | Pass |
+|Link opens on a new tab               | Click on  links | A new tab is opened                  | Pass |
 
 By running the game multiple times and observing the console output on Chrome Devtools, I verified that the correct emotion appears in a random position each time. The correctEmotionIndex will vary between 0 and 3, ensuring the correct emotion's image is displayed in a different position for each game round.
 
