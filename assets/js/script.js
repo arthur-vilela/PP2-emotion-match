@@ -137,12 +137,12 @@ function updateTimer(){
  */
 function checkAnswer(img, selectedEmotion, correctEmotion) {
     if (selectedEmotion === correctEmotion) {
-        img.classList.add("correct"); // Add green border for correct answer
+        img.classList.add("correct"); // Add green shadow for correct answer
         score += remainingTime; // Increase score by remaining time
         correctGuesses.push(correctEmotion); // Add the correct emotion to the array
     } else {
         img.classList.add("incorrect");
-        wrongAnswers++; // Increase wrong answer counter, and don't forget to change the alert for a more positive one
+        wrongAnswers++; // Increase wrong answer counter
     }
 
     /* Wait for 0.7 second before moving to the next round

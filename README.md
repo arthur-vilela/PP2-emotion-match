@@ -55,21 +55,21 @@ The time creates a feeling of challenge and urgency, making the game more compel
 
 - The website layout is highly simple and centralized. Divs with curved edges were chosen to give a lighter mood to the game. Simple design also helps with clarity and navigation. All buttons are acessible with your thumb closer to the bottom of the page, which can be useful for users with large cellphones.
 
-#### Home page mobile
+    #### Home page mobile
 
-![Wireframe of the home screen on mobile device](docs/framework-hmpg-mob.png)
+    ![Wireframe of the home screen on mobile device](docs/framework-hmpg-mob.png)
 
-#### Game page mobile
+    #### Game page mobile
 
-![Wireframe of the game screen on mobile device](docs/framework-gmpg-mob.png)
+    ![Wireframe of the game screen on mobile device](docs/framework-gmpg-mob.png)
 
-#### Final score page mobile
+    #### Final score page mobile
 
-![Wireframe of the final score screen on mobile device](docs/framework-scpg-mob.png)
+    ![Wireframe of the final score screen on mobile device](docs/framework-scpg-mob.png)
 
-#### Game page desktop
+    #### Game page desktop
 
-![Wireframe of the game screen on desktop device](docs/framework-gmpg-desk.png)
+    ![Wireframe of the game screen on desktop device](docs/framework-gmpg-desk.png)
 
 ## Features
 
@@ -288,6 +288,8 @@ From the `Source` section drop-down menu, select the `Master Branch`
 - [Stackoverflow](https://stackoverflow.com/questions/2532218/pick-random-property-from-a-javascript-object) | Logic to obtain random emotions from the emotion object was adapted from this answer
 
 - [W3Schools](https://www.w3schools.com/jsref/jsref_foreach.asp) | Explanation and examples of the "forEach" method were taken from this tutorial
+
+- [W3Schools](https://www.w3schools.com/js/js_timing.asp) | Explanation for interval methods used in the countdown timer and small try out area 
 
 - [Mdn Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) | Explanation and syntax for arrow function (=>)
 
