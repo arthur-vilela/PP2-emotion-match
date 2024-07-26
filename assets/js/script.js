@@ -1,6 +1,8 @@
+/* Div containing each page of the game*/
 const homePageDiv = document.getElementById("start-page");
 const gamePageDiv = document.getElementById("start-game-div");
 const scorePageDiv = document.getElementById("final-score-div");
+/* Contants getting the buttons from HTML */
 const startGameBtn = document.getElementById("start-game-btn");
 const restartBtn = document.getElementById("restart");
 const instructionsBtn = document.getElementById("instructions");
@@ -9,6 +11,7 @@ const emotionDisplay = document.getElementById("emotion");
 const images = document.querySelectorAll("#images img");
 const timerDisplay = document.getElementById("timer");
 
+/* Object with available emotion and their source paths */
 let emotions = {
     Grief: 'assets/images/grief.webp',
     Amazement: 'assets/images/amazement.webp',
@@ -28,6 +31,7 @@ let emotions = {
     Disgust: 'assets/images/disgust.webp'
 };
 
+/* Object with emotion list and their alt texts */
 let altTexts = {
     Grief: 'An old person with their head down, and both hands on their head',
     Amazement: 'Three people with a surprised expression, eyes wide open and mouth slightly agape',
@@ -56,7 +60,7 @@ let correctGuesses = []; // Array to store the correctly guessed emotions
 let timer; // Variable to hole timer intervalo
 let remainingTime; // Variable to keep track of remaing time
 
-/**
+/*
  * Function to get random emotions from the emotions object
  */
 function getRandomEmotions(emotions, count) {
@@ -72,13 +76,10 @@ function getRandomEmotions(emotions, count) {
             randomKeys.push(randomKey);
         }
     }
-
     return randomKeys;
 }
 
-/**
- * Function to start a new game
- */
+/* Function to start a new game */
 function startNewGame() {
     homePageDiv.style.display = "none"; // Hide the home screen and display the initial game screen
     gamePageDiv.style.display = "block";
@@ -91,9 +92,7 @@ function startNewGame() {
     nextRound(); // Start the first round
 }
 
-/**
- * Function to setup next round
- */
+/* Function to setup next round */
 function nextRound() {
     if (currentRound >= totalRounds) { // Check if it has already been six rounds
         showFinalScore();
@@ -121,9 +120,7 @@ function nextRound() {
     timer = setInterval(updateTimer, 1000); // Start the countdown
 }
 
-/*
-* Fcuntion to update time
-*/
+/*  Function to update time */
 function updateTimer(){
     remainingTime--;
     timerDisplay.textContent = remainingTime;
@@ -132,9 +129,7 @@ function updateTimer(){
         nextRound();
     }  
 }
-/**
- * Function to check the selected answer
- */
+/* Function to check the selected answer */
 function checkAnswer(img, selectedEmotion, correctEmotion) {
     if (selectedEmotion === correctEmotion) {
         img.classList.add("correct"); // Add green shadow for correct answer
@@ -145,7 +140,8 @@ function checkAnswer(img, selectedEmotion, correctEmotion) {
         wrongAnswers++; // Increase wrong answer counter
     }
 
-    /* Wait for 0.7 second before moving to the next round
+    /** 
+    * Wait for 0.7 second before moving to the next round
     * so the user can see the shadow-box */
     setTimeout(() => {
         nextRound(); // Move to next round

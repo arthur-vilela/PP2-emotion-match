@@ -10,7 +10,7 @@ body {
     background-color: #199191;
     color: #333333;
 }
-
+/* Div containing home, game and score page */
 .container {
     margin: 15px;
     background-color: #fafafa;
@@ -48,6 +48,7 @@ header h1 {
     padding-top: 5px;
 }
 
+/* Style for all buttons in different divs */
 button {
     background-color: #fafafa;
     margin: 10px;
@@ -90,6 +91,7 @@ button:hover {
     padding-bottom: 50%;
 }
 
+/* Timer div on game page */
 .circle {
     background-color: #105c5c;
     border-radius: 50%;
@@ -104,11 +106,13 @@ img {
     border-radius: 5px;
 }
 
+/* Green shadow on correct image */
 .correct {
     box-shadow: 0 0px 10px 5px rgb(33, 121, 39);
     transition: 0.2s ease;
 }
 
+/* Red shadow on incorrect image */
 .incorrect {
     box-shadow: 0 0px 10px 5px rgb(150 10 10);
     transition: 0.2s ease;
@@ -121,6 +125,7 @@ img {
     align-items: center;
 }
 
+/* Final score span */
 #final-score {
     color: #105c5c;
     font-size: 200%;
