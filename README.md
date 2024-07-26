@@ -2,7 +2,7 @@
 
 ![Screenshot of the website in different screensizes](docs/view-different-devices.png)
 
-The Emotion Match Game is a online quiz game designed to improve people's emotion literacy by increasing their emotional vocabulary and thus to better express their feelings. The concept of the emotion wheel is widely present in the psychology field as well as schools. The game will be useful for people who  can't easily read emotional cues in social situations. That includes children, emotionally blocked adults and people with mental diagnostics that affect their social abilities.
+The Emotion Match Game is an online quiz game designed to improve people's emotion literacy by increasing their emotional vocabulary and thus to better express their feelings. The concept of the emotion wheel is widely present in the psychology field as well as schools. The game will be useful for people who  can't easily read emotional cues in social situations. That includes children, adults that may struggle with their social abilities.
 
 The user must match the randomly given emotion with the image that best depicts it, increasing their final score.
 
@@ -38,13 +38,13 @@ The game maintains a consistent design language throughout all screens, using a 
 
 #### Color scheme
 
-![Four squares, one white, one dark green, one olive green and one dark grey](docs/colour-scheme.png)
+![Four squares, one white, one dark green, one olive green, and one dark grey](docs/colour-scheme.png)
 
 #### Favicon
 
 The favicon was adapted from the original rendering of the Wheel of Emotions by Robert Plutchik, keeping the connection between the game and the original concept.
 
-![Icon depicting a flower with different coloured pethals](assets/favicon/android-chrome-192x192.png)
+![Icon depicting a flower with different coloured petals](assets/favicon/android-chrome-192x192.png)
 
 ### Motivation:
 
@@ -53,7 +53,7 @@ The time creates a feeling of challenge and urgency, making the game more compel
 
 ### Wireframes
 
-- The website layout is highly simple and centralized. Divs with curved edges were chosen to give a lighter mood to the game. Simple design also helps with clarity and navigation. All buttons are acessible with your thumb closer to the bottom of the page, which can be useful for users with large cellphones.
+- The website layout is highly simple and centralized. Divs with curved edges were chosen to give a lighter mood to the game. Simple design also helps with clarity and navigation. All buttons are accessible with your thumb closer to the bottom of the page, which can be useful for users with large cellphones.
 
     #### Home page mobile
 
@@ -83,7 +83,7 @@ The landing page includes:
 - A Start button
 - An icon linking to the project's GitHub page
 
- From the get go, the user knows what the game is about, why and how to play it.
+ From the get go, the user knows what the game is about, why, and how to play it.
 Below the instructions, there is the centralized "Start!" button, taking the user directly to the first round of the game.
 
 #### Desktop
@@ -117,13 +117,13 @@ When clicked, a box-shadow will appear around the image. It will be either green
 #### Countdown
 
 To create a more dynamic experience, I added a countdown timer on top of the given emotion. The timer starts at 10 seconds and, when it drops to zero, a new round is started.
-If the user clicks on an image, either correctly or incorrectly, the amount of seconds left in the timer are added to the overall score.
+If the user clicks on an image, either correctly or incorrectly, the number of seconds left in the timer is added to the overall score.
 
 ### Final score page
 
 The final score page includes:
 
-- The users final score, being the additional of seconds left every round
+- The users final score, being the additional number of seconds left every round
 - A tally with the wrong answers
 - A short invitation to play one more time
 - A Restart button
@@ -141,8 +141,8 @@ The Instructions button will take the user back to the home page and the Restart
 
 ## Features left to implement
 
-- Add variations of images depending of user cultural background.
-    - Since different cultures have different physical reactions and expression to different emotions, one interesting features to be implemented in the future could be a variation in images or emotions depending on the user's origin.
+- Add variations of images depending on the user's cultural background.
+    - Since different cultures have different physical reactions and expressions to different emotions, one interesting feature to be implemented in the future could be a variation in images or emotions depending on the user's origin.
 
 
 ## Usability
@@ -157,7 +157,7 @@ During each round, the game presents the user with four images, each depicting d
 
 3. `checkAnswer()`: This function is triggered when the user clicks on an image. It checks if the selected emotion matches the correct emotion. If correct, the image's border turns green, and if incorrect, it turns red. The game then waits for a short duration before proceeding to the next round or displaying the final score if all rounds are completed. This waiting time (0.7s) is for the user to be able to see the shadow-box colour change. This function then defines the time left in the countdown and adds it to the score.
 
-4. `showFinalScore()`: Once all rounds are completed, this function displays the user's final score by, including the number of incorrect answers.
+4. `showFinalScore()`: Once all rounds are completed, this function displays the user's final score by including the number of incorrect answers.
 
 5. `restartGame()`: This function allows the user to restart the game without returning to the initial instruction screen, enabling continuous play and practice.
 
@@ -171,7 +171,7 @@ During each round, the game presents the user with four images, each depicting d
 |--|--|
 |HTML| Structure the webpage
 |CSS| Style and add layout to the project
-|JavaScript| Make the website interactive; keep score based on the users choices and present the scores to them
+|JavaScript| Make the website interactive; keep scores based on the users choices and present the scores to them
 |[Font Awesome](https://fontawesome.com/)| Used for the GitHub icon
 |[GoogleFonts](https://fonts.google.com/)| Research, pair and add fonts to the project
 |Adobe Photoshop| Create the favicon logo
@@ -204,7 +204,7 @@ By running the game multiple times and observing the console output on Chrome De
 ### User testing
 
 - I asked five people of between 28 and 64 years old to play the game multiple times, during coding and after. They found the following bugs that are described in the following.
-- All five people declared that they did not have any difficulties in understading and following the instructions of the game.
+- All five people declared that they did not have any difficulties in understanding and following the instructions of the game.
 
 # Bugs
 - When inspecting the deployed website and visualizing it on mobile resolutions, the top of the home page div touch the top and bottom of the screen, not showing the padding nor scrolling all the way. A margin was added to the .container `<div>` fixing the spacing issue.
@@ -213,7 +213,7 @@ By running the game multiple times and observing the console output on Chrome De
 
 - When viewed on mobile devices, the `homePageDiv` and the `finalScoreDiv` where not centered vertically on the page. This was fixed by adding a function changing the `<body` height attribute to 100% on mobile devices and to 100vh on larger screens
 
-- Final score didn't update, keeping the placeholder text at the end of game.
+- Final score didn't update, keeping the placeholder text at the end of the game.
 
     ![screenshot of final score screen with placeholder text instead of score](docs/bug-final-score.png)
 
@@ -234,7 +234,7 @@ By running the game multiple times and observing the console output on Chrome De
 - The same emotion could appear in subsequent rounds, since the emotions are selected randomly. To fix this, I:
     - added an array to store the correctly guessed emotions;
     - modified the `getRandomEmotions` function to exclude these emotions from the selection pool;
-    - updated the `checkAnswer` function to add the correct emotion the the array when guessed correcly.
+    - updated the `checkAnswer` function to add the correct emotion to the array when guessed correcly.
 
 - One image wouldn't show and was described as undefined when playing the game. This happened after creating an array to contain the already chosen correct answers.
 
@@ -261,7 +261,7 @@ By running the game multiple times and observing the console output on Chrome De
 ### Lighthouse
 
 - Lighthouse in devtools indicated a high accessibility score.
-- Performance score varied minimally when analysing  the `mobile` or `desktop` versions.
+- Performance scores varied minimally when analysing  the `mobile` or `desktop` versions.
 
 #### Mobile
 
@@ -304,5 +304,5 @@ From the `Source` section drop-down menu, select the `Master Branch`
 - The base for the README.md file was taken from [Code Institute readme template](https://github.com/Code-Institute-Solutions/readme-template) on Github. 
 
 # Acknowledgements
-- My mentor Alan Bushell for great counceling and positive reinforcement
+- My mentor Alan Bushell for great counseling and positive reinforcement
 - My wife Kyra Sendler for giving psychological insight, user testing and telling me to take breaks
